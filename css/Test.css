@@ -76,6 +76,33 @@
   text-shadow: 0 0 10px var(--c), 0 0 20px var(--c), 0 0 40px var(--c), 0 0 80px var(--c), 0 0 160px var(--c);
   animation: animate 5s linear infinite;
 }
+.toc-body > ol {
+  position: absolute;
+}
+.toc-list-item::before {
+  content: '';
+  position: absolute;
+  left: 0.25rem;
+  height: 0.25rem;
+  margin: 0.625rem 0;
+  width: 0.25rem;
+  border-radius: 0.125rem;
+  background: #000;
+  visibility: hidden;
+  transition: height 0.2s ease-in-out, margin 0.2s ease-in-out, visibility 0.2s ease-in-out;
+}
+.toc-list-item.is-active-li::before {
+  height: 1rem;
+  margin: 0.25rem 0;
+  visibility: visible;
+}
+[data-user-color-scheme='dark'] .tocbot-active-link {
+  color: #ffa500;
+}
+[data-user-color-scheme='dark'] .toc-list-item::before {
+  background: #ffa500;
+  transition: background 0.2s ease-in-out;
+}
 @-moz-keyframes animate {
   to {
     filter: hue-rotate(360deg);
