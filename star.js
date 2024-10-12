@@ -172,7 +172,7 @@ snow.start();
     }
   
     // 计时起始时间，仿照格式自行修改
-    var start = Date.parse("2021-07-10T16:03:05");
+    var start = Date.parse("2024-10-07T23:03:05");
   
     function update() {
       var now = Date.now() + 250;
@@ -196,10 +196,10 @@ snow.start();
   })();
 
  // 在手机端显示的背景图片链接
-const mobileBgImageUrl = "url('')";
+const mobileBgImageUrl = "url('/img/p.jpg')";
 
 // 在电脑端显示的背景图片链接
-const desktopBgImageUrl = "url('/img/R-C.jpg')";
+const desktopBgImageUrl = "url('/img/p.jpg')";
 
 // 在手机端设置背景图片
 if (window.innerWidth < 768) {
