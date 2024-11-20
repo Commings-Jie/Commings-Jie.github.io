@@ -196,10 +196,10 @@ snow.start();
   })();
 
  // 在手机端显示的背景图片链接
-const mobileBgImageUrl = "url('/img/p.jpg')";
+const mobileBgImageUrl = "url('/img/R-C.jpg')";
 
 // 在电脑端显示的背景图片链接
-const desktopBgImageUrl = "url('/img/p.jpg')";
+const desktopBgImageUrl = "url('/img/R-C.jpg')";
 
 // 在手机端设置背景图片
 if (window.innerWidth < 768) {
