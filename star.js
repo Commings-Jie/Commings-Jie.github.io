@@ -334,6 +334,45 @@ snow.start();
   });
 })();
 
+// ========== 文章页面背景图处理 ==========
+(function() {
+  var banner = document.querySelector('#banner');
+  if (!banner) return;
+  
+  // 检测是否是文章页面（有 post-meta 元素）
+  var isPost = document.querySelector('.post-meta') || window.location.pathname.match(/\/\d{4}\/\d{2}\/\d{2}\//);
+  if (!isPost) return;
+  
+  // 移除 CSS 背景图
+  banner.style.backgroundImage = 'none';
+  
+  // 创建 img 元素替代背景图
+  var img = document.createElement('img');
+  img.src = '/img/beach-bg.png';
+  img.alt = 'banner';
+  img.style.cssText = [
+    'position: absolute',
+    'top: 0',
+    'left: 0',
+    'width: 100%',
+    'height: 100%',
+    'object-fit: cover',
+    'object-position: center center',
+    'z-index: 0',
+    'pointer-events: none'
+  ].join(';');
+  
+  banner.insertBefore(img, banner.firstChild);
+  banner.style.position = 'relative';
+  banner.style.overflow = 'hidden';
+  
+  var fullBg = banner.querySelector('.full-bg-img');
+  if (fullBg) {
+    fullBg.style.position = 'relative';
+    fullBg.style.zIndex = '1';
+  }
+})();
+
 const cards = document.querySelectorAll('.index-card')
 if (cards.length) {
   document.querySelector('.row').setAttribute('style', 'overflow: hidden;')
