@@ -221,16 +221,28 @@ snow.start();
   video.preload = 'auto';
   video.setAttribute('playsinline', '');
   video.setAttribute('webkit-playsinline', '');
+  video.setAttribute('autoplay', '');
+  video.setAttribute('loop', '');
+  video.setAttribute('muted', '');
+  
+  // 确保视频自动播放
+  video.play().catch(function(e) {
+    console.log('Video autoplay failed:', e);
+    // 如果自动播放失败，尝试用户交互后播放
+    document.addEventListener('click', function() {
+      video.play();
+    }, { once: true });
+  });
 
   // 视频样式：铺满 banner 区域，显示海岸线
   video.style.cssText = [
     'position: absolute',
-    'top: -5%',
+    'top: 0',
     'left: 0',
     'width: 100%',
-    'height: 115%',
+    'height: 100%',
     'object-fit: cover',
-    'object-position: center 72%',
+    'object-position: center center',
     'z-index: 0',
     'pointer-events: none',
     'will-change: transform'
