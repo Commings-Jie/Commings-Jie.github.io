@@ -206,7 +206,7 @@ snow.start();
   // 设置 mask 为半透明，让视频透出
   var mask = banner.querySelector('.mask');
   if (mask) {
-    mask.style.backgroundColor = 'rgba(0, 0, 0, 0.25)';
+    mask.style.backgroundColor = 'rgba(0, 0, 0, 0.15)';
   }
 
   // 创建视频元素
@@ -222,17 +222,18 @@ snow.start();
   video.setAttribute('playsinline', '');
   video.setAttribute('webkit-playsinline', '');
 
-  // 视频样式：铺满 banner 区域
+  // 视频样式：铺满 banner 区域，带视差效果
   video.style.cssText = [
     'position: absolute',
     'top: 0',
     'left: 0',
     'width: 100%',
-    'height: 100%',
+    'height: 120%',
     'object-fit: cover',
     'object-position: center',
     'z-index: 0',
-    'pointer-events: none'
+    'pointer-events: none',
+    'will-change: transform'
   ].join(';');
 
   // 插入到 banner 的最前面（在 mask 下方）
@@ -249,6 +250,50 @@ snow.start();
     fullBg.style.zIndex = '1';
   }
 
+  // 标题居中显示 - 在视口中心（50vh）
+  var bannerText = banner.querySelector('.banner-text');
+  if (bannerText) {
+    bannerText.style.cssText = [
+      'position: fixed',
+      'top: 50%',
+      'left: 50%',
+      'transform: translate(-50%, -50%)',
+      'z-index: 2',
+      'width: 100%',
+      'pointer-events: none'
+    ].join(';');
+    
+    // 滚动时标题淡出
+    window.addEventListener('scroll', function() {
+      var scrolled = window.pageYOffset;
+      var opacity = 1 - (scrolled / 300);
+      bannerText.style.opacity = Math.max(opacity, 0);
+    });
+  }
+
+  // 视差滚动效果
+  var ticking = false;
+  window.addEventListener('scroll', function() {
+    if (!ticking) {
+      window.requestAnimationFrame(function() {
+        var scrolled = window.pageYOffset;
+        var bannerHeight = banner.offsetHeight;
+        
+        // 视频视差 - 缓慢移动
+        if (scrolled < bannerHeight) {
+          video.style.transform = 'translateY(' + (scrolled * 0.3) + 'px)';
+        }
+        
+        // banner 淡出效果
+        var opacity = 1 - (scrolled / bannerHeight) * 0.5;
+        banner.style.opacity = Math.max(opacity, 0.5);
+        
+        ticking = false;
+      });
+      ticking = true;
+    }
+  });
+
   // 移动端优化：减少资源消耗
   if (window.innerWidth < 768) {
     video.style.objectPosition = 'center center';
@@ -257,7 +302,7 @@ snow.start();
   // 窗口大小变化时确保视频正确覆盖
   window.addEventListener('resize', function() {
     video.style.width = '100%';
-    video.style.height = '100%';
+    video.style.height = '120%';
   });
 })();
 
