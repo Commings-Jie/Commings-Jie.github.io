@@ -103,6 +103,25 @@
   background: #ffa500;
   transition: background 0.2s ease-in-out;
 }
+#banner {
+  position: relative;
+  overflow: hidden;
+}
+#banner-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  z-index: 0;
+  pointer-events: none;
+}
+#banner .full-bg-img {
+  position: relative;
+  z-index: 1;
+}
 @-moz-keyframes animate {
   to {
     filter: hue-rotate(360deg);

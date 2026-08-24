@@ -195,25 +195,71 @@ snow.start();
     setInterval(update, 250);
   })();
 
- // 在手机端显示的背景图片链接
-const mobileBgImageUrl = "url('/img/R-C.jpg')";
+// ========== 首页视频背景 - 龙珠风景 ==========
+(function() {
+  var banner = document.querySelector('#banner');
+  if (!banner) return;
 
-// 在电脑端显示的背景图片链接
-const desktopBgImageUrl = "url('/img/R-C.jpg')";
+  // 移除 banner 原有静态背景图
+  banner.style.backgroundImage = 'none';
 
-// 在手机端设置背景图片
-if (window.innerWidth < 768) {
-  document.querySelector('#web_bg').setAttribute('style', `background-image: ${mobileBgImageUrl};position: fixed;width: 100%;height: 100%;z-index: -1;background-size: cover;`);
-} else {
-  // 在电脑端设置背景图片
-  document.querySelector('#web_bg').setAttribute('style', `background-image: ${desktopBgImageUrl};position: fixed;width: 100%;height: 100%;z-index: -1;background-size: cover;`);
-}
+  // 设置 mask 为半透明，让视频透出
+  var mask = banner.querySelector('.mask');
+  if (mask) {
+    mask.style.backgroundColor = 'rgba(0, 0, 0, 0.25)';
+  }
 
-// 设置banner的背景图片为空
-document.querySelector("#banner").setAttribute('style', 'background-image: none');
+  // 创建视频元素
+  var video = document.createElement('video');
+  video.id = 'banner-video';
+  video.src = '/videos/dragonball.mp4';
+  video.poster = '/videos/dragonball-poster.jpg';
+  video.autoplay = true;
+  video.loop = true;
+  video.muted = true;
+  video.playsInline = true;
+  video.preload = 'auto';
+  video.setAttribute('playsinline', '');
+  video.setAttribute('webkit-playsinline', '');
 
-// 设置banner的.mask背景颜色透明
-document.querySelector("#banner .mask").setAttribute('style', 'background-color: rgba(0,0,0,0)');
+  // 视频样式：铺满 banner 区域
+  video.style.cssText = [
+    'position: absolute',
+    'top: 0',
+    'left: 0',
+    'width: 100%',
+    'height: 100%',
+    'object-fit: cover',
+    'object-position: center',
+    'z-index: 0',
+    'pointer-events: none'
+  ].join(';');
+
+  // 插入到 banner 的最前面（在 mask 下方）
+  banner.insertBefore(video, banner.firstChild);
+
+  // 确保 banner 内部层级正确
+  banner.style.position = 'relative';
+  banner.style.overflow = 'hidden';
+
+  // 确保 full-bg-img 和 mask 在视频之上
+  var fullBg = banner.querySelector('.full-bg-img');
+  if (fullBg) {
+    fullBg.style.position = 'relative';
+    fullBg.style.zIndex = '1';
+  }
+
+  // 移动端优化：减少资源消耗
+  if (window.innerWidth < 768) {
+    video.style.objectPosition = 'center center';
+  }
+
+  // 窗口大小变化时确保视频正确覆盖
+  window.addEventListener('resize', function() {
+    video.style.width = '100%';
+    video.style.height = '100%';
+  });
+})();
 
 const cards = document.querySelectorAll('.index-card')
 if (cards.length) {
