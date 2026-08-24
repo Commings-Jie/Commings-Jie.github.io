@@ -212,8 +212,8 @@ snow.start();
   // 创建视频元素
   var video = document.createElement('video');
   video.id = 'banner-video';
-  video.src = '/videos/dragonball.mp4';
-  video.poster = '/videos/dragonball-poster.jpg';
+  video.src = '/videos/dragonball.mp4?v=' + Date.now();
+  video.poster = '/videos/dragonball-poster.jpg?v=' + Date.now();
   video.autoplay = true;
   video.loop = true;
   video.muted = true;
@@ -225,14 +225,30 @@ snow.start();
   video.setAttribute('loop', '');
   video.setAttribute('muted', '');
   
-  // 确保视频自动播放
-  video.play().catch(function(e) {
-    console.log('Video autoplay failed:', e);
-    // 如果自动播放失败，尝试用户交互后播放
-    document.addEventListener('click', function() {
-      video.play();
-    }, { once: true });
+  // 调试信息
+  video.addEventListener('error', function(e) {
+    console.error('Video error:', e);
   });
+  video.addEventListener('canplay', function() {
+    console.log('Video can play');
+  });
+  video.addEventListener('playing', function() {
+    console.log('Video is playing');
+  });
+  
+  // 确保视频自动播放
+  var playPromise = video.play();
+  if (playPromise !== undefined) {
+    playPromise.then(function() {
+      console.log('Video autoplay success');
+    }).catch(function(e) {
+      console.log('Video autoplay failed:', e);
+      // 如果自动播放失败，尝试用户交互后播放
+      document.addEventListener('click', function() {
+        video.play();
+      }, { once: true });
+    });
+  }
 
   // 视频样式：铺满 banner 区域，显示海岸线
   video.style.cssText = [
