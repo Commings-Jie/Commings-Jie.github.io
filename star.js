@@ -343,8 +343,8 @@ snow.start();
   var isPost = document.querySelector('.post-meta') || window.location.pathname.match(/\/\d{4}\/\d{2}\/\d{2}\//);
   if (!isPost) return;
   
-  // 移除 CSS 背景图
-  banner.style.backgroundImage = 'none';
+  // 移除 CSS 背景图，设置渐变色背景（匹配图片边缘的天空和海洋）
+  banner.style.background = 'linear-gradient(to bottom, #87CEEB 0%, #B0E0E6 30%, #4682B4 70%, #2F4F6F 100%)';
   
   // 创建 img 元素替代背景图
   var img = document.createElement('img');
@@ -356,7 +356,7 @@ snow.start();
     'left: 0',
     'width: 100%',
     'height: 100%',
-    'object-fit: cover',
+    'object-fit: contain',
     'object-position: center center',
     'z-index: 0',
     'pointer-events: none'
