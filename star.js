@@ -222,15 +222,15 @@ snow.start();
   video.setAttribute('playsinline', '');
   video.setAttribute('webkit-playsinline', '');
 
-  // 视频样式：铺满 banner 区域，带视差效果
+  // 视频样式：铺满 banner 区域，显示海岸线
   video.style.cssText = [
     'position: absolute',
-    'top: 0',
+    'top: -5%',
     'left: 0',
     'width: 100%',
-    'height: 120%',
+    'height: 115%',
     'object-fit: cover',
-    'object-position: center',
+    'object-position: center 72%',
     'z-index: 0',
     'pointer-events: none',
     'will-change: transform'

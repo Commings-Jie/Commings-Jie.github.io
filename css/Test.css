@@ -114,19 +114,19 @@
   bottom: 0;
   left: 0;
   right: 0;
-  height: 200px;
-  background: linear-gradient(to bottom, transparent, rgba(255,255,255,0.3));
+  height: 300px;
+  background: linear-gradient(to bottom, transparent 0%, rgba(255,200,150,0.1) 20%, rgba(255,220,180,0.25) 40%, rgba(255,230,200,0.5) 60%, rgba(255,240,220,0.75) 80%, rgba(255,245,235,0.92) 100%);
   z-index: 1;
   pointer-events: none;
 }
 #banner-video {
   position: absolute;
-  top: 0;
+  top: -5%;
   left: 0;
   width: 100%;
-  height: 120%;
+  height: 115%;
   object-fit: cover;
-  object-position: center;
+  object-position: center 72%;
   z-index: 0;
   pointer-events: none;
   will-change: transform;
@@ -141,13 +141,13 @@ body {
   background-attachment: fixed;
 }
 #board {
-  background: rgba(255,255,255,0.3);
+  background: rgba(255,255,255,0.25);
   backdrop-filter: blur(5px);
-  box-shadow: 0 0 20px rgba(0,0,0,0.15);
-  margin-top: -50px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.1);
+  margin-top: -80px;
   position: relative;
   z-index: 10;
-  border: 1px solid rgba(255,255,255,0.2);
+  border: 1px solid rgba(255,255,255,0.15);
 }
 @-moz-keyframes animate {
   to {
