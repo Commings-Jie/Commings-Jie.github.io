@@ -346,7 +346,10 @@ snow.start();
   // 移除 CSS 背景图
   banner.style.background = 'none';
   
-  // 创建 img 元素替代背景图
+  // 设置 banner 高度为 100vh，和首页一致
+  banner.parentElement.style.height = '100vh';
+  
+  // 创建 img 元素替代背景图，使用与首页视频相同的设置
   var img = document.createElement('img');
   img.src = '/img/beach-bg.png';
   img.alt = 'banner';
@@ -357,7 +360,7 @@ snow.start();
     'width: 100%',
     'height: 100%',
     'object-fit: cover',
-    'object-position: center 30%',
+    'object-position: center center',
     'z-index: 0',
     'pointer-events: none'
   ].join(';');
