@@ -1,0 +1,763 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=light>
+
+
+
+<head>
+  <meta charset="UTF-8">
+
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
+  <link rel="icon" href="/img/fluid.png">
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="Jie">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="姓名：贺凡思杰  学号：24020007043     姓名和学号？ 贺凡思杰，24020007043    本实验属于哪门课程？ 中国海洋大学26夏《移动软件开发》   实验名称？ 实验2：个人名片小程序   博客地址？ https:&#x2F;&#x2F;commings-jie.github.io&#x2F;   Github仓库地址？ https:&#x2F;&#x2F;github.com&#x2F;Commings-Jie&#x2F;weixin-xia">
+<meta property="og:type" content="article">
+<meta property="og:title" content="实验2：个人名片小程序">
+<meta property="og:url" content="http://example.com/2026/08/24/%E5%AE%9E%E9%AA%8C2-%E4%B8%AA%E4%BA%BA%E5%90%8D%E7%89%87%E5%B0%8F%E7%A8%8B%E5%BA%8F/index.html">
+<meta property="og:site_name" content="Commings-Jie">
+<meta property="og:description" content="姓名：贺凡思杰  学号：24020007043     姓名和学号？ 贺凡思杰，24020007043    本实验属于哪门课程？ 中国海洋大学26夏《移动软件开发》   实验名称？ 实验2：个人名片小程序   博客地址？ https:&#x2F;&#x2F;commings-jie.github.io&#x2F;   Github仓库地址？ https:&#x2F;&#x2F;github.com&#x2F;Commings-Jie&#x2F;weixin-xia">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/img/R.jpg">
+<meta property="article:published_time" content="2026-08-24T08:55:00.000Z">
+<meta property="article:modified_time" content="2026-08-25T10:22:15.565Z">
+<meta property="article:author" content="Jie">
+<meta property="article:tag" content="微信小程序">
+<meta property="article:tag" content="实验报告">
+<meta property="article:tag" content="移动软件开发">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="http://example.com/img/R.jpg">
+  
+  
+  
+  <title>实验2：个人名片小程序 | Commings-Jie</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1749284_5i9bdhy70f8.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1736178_k526ubmyhba.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+  
+<link rel="stylesheet" href="https://jsd.cdn.zzko.cn/gh/EmoryHuang/BlogBeautify@1.1/scroll.css">
+<link rel="stylesheet" href="https://jsd.cdn.zzko.cn/gh/EmoryHuang/BlogBeautify@1.1/gradient.css">
+<link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/lxgw-wenkai-screen-webfont/1.7.0/style.min.css">
+<link rel="stylesheet" href="/css/glassbg.css">
+<link rel="stylesheet" href="/css/Test.css">
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.8","typing":{"enable":false,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":true,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body><!-- hexo injector body_begin start --><div id="web_bg"></div><!-- hexo injector body_begin end -->
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 100vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>可乐不沾冰</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/beach-bg.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle">实验2：个人名片小程序</span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2026-08-24 16:55" pubdate>
+          2026年8月24日 下午
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          2.9k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          25 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+        <div class="scroll-down-bar">
+          <i class="iconfont icon-arrowdown"></i>
+        </div>
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">实验2：个人名片小程序</h1>
+            
+              <p id="updated-time" class="note note-info" style="">
+                
+                  
+                    本文最后更新于 2026年8月25日 晚上
+                  
+                
+              </p>
+            
+            
+              <div class="markdown-body">
+                
+                <center>姓名：贺凡思杰  学号：24020007043</center>
+
+<table>
+<thead>
+<tr>
+<th>姓名和学号？</th>
+<th>贺凡思杰，24020007043</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>本实验属于哪门课程？</td>
+<td>中国海洋大学26夏《移动软件开发》</td>
+</tr>
+<tr>
+<td>实验名称？</td>
+<td>实验2：个人名片小程序</td>
+</tr>
+<tr>
+<td>博客地址？</td>
+<td><a target="_blank" rel="noopener" href="https://commings-jie.github.io/">https://commings-jie.github.io/</a></td>
+</tr>
+<tr>
+<td>Github仓库地址？</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/Commings-Jie/weixin-xiaochengxu">https://github.com/Commings-Jie/weixin-xiaochengxu</a></td>
+</tr>
+</tbody></table>
+<h2 id="一、实验内容"><a href="#一、实验内容" class="headerlink" title="一、实验内容"></a>一、实验内容</h2><h3 id="1-1-实验环境准备"><a href="#1-1-实验环境准备" class="headerlink" title="1.1 实验环境准备"></a>1.1 实验环境准备</h3><ul>
+<li><strong>操作系统</strong>：Windows 11</li>
+<li><strong>开发工具</strong>：微信开发者工具 Stable 2.02.2608040</li>
+<li><strong>渲染模式</strong>：Skyline + glass-easel 组件框架</li>
+</ul>
+<h3 id="1-2-实验任务"><a href="#1-2-实验任务" class="headerlink" title="1.2 实验任务"></a>1.2 实验任务</h3><p>制作一个专属于自己的名片小程序，包括 AI 生成的头图、个人文本描述，可以分享给别人。</p>
+<h3 id="1-3-小程序实现"><a href="#1-3-小程序实现" class="headerlink" title="1.3 小程序实现"></a>1.3 小程序实现</h3><h4 id="1-3-1-项目文件结构"><a href="#1-3-1-项目文件结构" class="headerlink" title="1.3.1 项目文件结构"></a>1.3.1 项目文件结构</h4><figure class="highlight axapta"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><code class="hljs axapta">实验二/<br>├── app.js                  <span class="hljs-meta"># 小程序入口逻辑</span><br>├── app.json                <span class="hljs-meta"># 全局配置（页面路由、导航栏）</span><br>├── app.wxss                <span class="hljs-meta"># 全局样式</span><br>├── images/<br>│   ├── card-header.png     <span class="hljs-meta"># AI生成的名片头图（16:9）</span><br>│   └── ouc-logo.png        <span class="hljs-meta"># 中国海洋大学校徽</span><br>├── components/<br>│   └── navigation-bar/     <span class="hljs-meta"># 自定义导航栏组件</span><br>│       ├── navigation-bar.js<br>│       ├── navigation-bar.json<br>│       ├── navigation-bar.wxml<br>│       └── navigation-bar.wxss<br>├── pages/<br>│   └── <span class="hljs-keyword">index</span>/<br>│       ├── <span class="hljs-keyword">index</span>.js        <span class="hljs-meta"># 首页逻辑（数据绑定、事件处理）</span><br>│       ├── <span class="hljs-keyword">index</span>.json      <span class="hljs-meta"># 页面配置</span><br>│       ├── <span class="hljs-keyword">index</span>.wxml      <span class="hljs-meta"># 页面模板（UI结构）</span><br>│       └── <span class="hljs-keyword">index</span>.wxss      <span class="hljs-meta"># 页面样式</span><br>├── project.config.json     <span class="hljs-meta"># 项目配置</span><br>└── sitemap.json            <span class="hljs-meta"># 站点地图</span><br></code></pre></td></tr></table></figure>
+
+<h4 id="1-3-2-核心代码"><a href="#1-3-2-核心代码" class="headerlink" title="1.3.2 核心代码"></a>1.3.2 核心代码</h4><p><strong>页面模板（index.wxml）：</strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br></pre></td><td class="code"><pre><code class="hljs html"><span class="hljs-comment">&lt;!--index.wxml--&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">navigation-bar</span> <span class="hljs-attr">title</span>=<span class="hljs-string">&quot;我的名片&quot;</span> <span class="hljs-attr">back</span>=<span class="hljs-string">&quot;&#123;&#123;false&#125;&#125;&quot;</span> <span class="hljs-attr">color</span>=<span class="hljs-string">&quot;black&quot;</span> <span class="hljs-attr">background</span>=<span class="hljs-string">&quot;#FFF&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">navigation-bar</span>&gt;</span><br><br><span class="hljs-tag">&lt;<span class="hljs-name">scroll-view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;scrollarea&quot;</span> <span class="hljs-attr">scroll-y</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;list&quot;</span>&gt;</span><br>  <span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;page-container&quot;</span>&gt;</span><br><br>    <span class="hljs-comment">&lt;!-- 上半部分：AI生成的名片头图 --&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;header-section&quot;</span>&gt;</span><br>      <span class="hljs-tag">&lt;<span class="hljs-name">image</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;header-image&quot;</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;/images/card-header.png&quot;</span> <span class="hljs-attr">mode</span>=<span class="hljs-string">&quot;widthFix&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">image</span>&gt;</span><br>    <span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span><br><br>    <span class="hljs-comment">&lt;!-- 下半部分：自定义个人信息卡片 --&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;card-section&quot;</span>&gt;</span><br><br>      <span class="hljs-comment">&lt;!-- 个人简介卡片 --&gt;</span><br>      <span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;info-card&quot;</span>&gt;</span><br>        <span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;card-header&quot;</span>&gt;</span><br>          <span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;avatar-wrapper&quot;</span>&gt;</span><br>            <span class="hljs-tag">&lt;<span class="hljs-name">text</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;avatar-text&quot;</span>&gt;</span>贺<span class="hljs-tag">&lt;/<span class="hljs-name">text</span>&gt;</span><br>          <span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span><br>          <span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;name-section&quot;</span>&gt;</span><br>            <span class="hljs-tag">&lt;<span class="hljs-name">text</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;name&quot;</span>&gt;</span>贺凡思杰<span class="hljs-tag">&lt;/<span class="hljs-name">text</span>&gt;</span><br>            <span class="hljs-tag">&lt;<span class="hljs-name">text</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;subtitle&quot;</span>&gt;</span>智能科学与技术专业<span class="hljs-tag">&lt;/<span class="hljs-name">text</span>&gt;</span><br>          <span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span><br>        <span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span><br><br>        <span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;divider&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span><br><br>        <span class="hljs-comment">&lt;!-- 信息列表 --&gt;</span><br>        <span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;info-list&quot;</span>&gt;</span><br>          <span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;info-item&quot;</span> <span class="hljs-attr">bindtap</span>=<span class="hljs-string">&quot;onCopyEmail&quot;</span>&gt;</span><br>            <span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;info-icon email-icon&quot;</span>&gt;</span><br>              <span class="hljs-tag">&lt;<span class="hljs-name">text</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;icon-text&quot;</span>&gt;</span>✉<span class="hljs-tag">&lt;/<span class="hljs-name">text</span>&gt;</span><br>            <span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span><br>            <span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;info-content&quot;</span>&gt;</span><br>              <span class="hljs-tag">&lt;<span class="hljs-name">text</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;info-label&quot;</span>&gt;</span>邮箱<span class="hljs-tag">&lt;/<span class="hljs-name">text</span>&gt;</span><br>              <span class="hljs-tag">&lt;<span class="hljs-name">text</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;info-value&quot;</span>&gt;</span>2167316266@qq.com<span class="hljs-tag">&lt;/<span class="hljs-name">text</span>&gt;</span><br>            <span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span><br>            <span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;info-action&quot;</span>&gt;</span><br>              <span class="hljs-tag">&lt;<span class="hljs-name">text</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;action-text&quot;</span>&gt;</span>复制<span class="hljs-tag">&lt;/<span class="hljs-name">text</span>&gt;</span><br>            <span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span><br>          <span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span><br><br>          <span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;info-item&quot;</span> <span class="hljs-attr">bindtap</span>=<span class="hljs-string">&quot;onVisitBlog&quot;</span>&gt;</span><br>            <span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;info-icon web-icon&quot;</span>&gt;</span><br>              <span class="hljs-tag">&lt;<span class="hljs-name">text</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;icon-text&quot;</span>&gt;</span>🌐<span class="hljs-tag">&lt;/<span class="hljs-name">text</span>&gt;</span><br>            <span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span><br>            <span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;info-content&quot;</span>&gt;</span><br>              <span class="hljs-tag">&lt;<span class="hljs-name">text</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;info-label&quot;</span>&gt;</span>个人博客<span class="hljs-tag">&lt;/<span class="hljs-name">text</span>&gt;</span><br>              <span class="hljs-tag">&lt;<span class="hljs-name">text</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;info-value&quot;</span>&gt;</span>commings-jie.github.io<span class="hljs-tag">&lt;/<span class="hljs-name">text</span>&gt;</span><br>            <span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span><br>            <span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;info-action&quot;</span>&gt;</span><br>              <span class="hljs-tag">&lt;<span class="hljs-name">text</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;action-text&quot;</span>&gt;</span>访问<span class="hljs-tag">&lt;/<span class="hljs-name">text</span>&gt;</span><br>            <span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span><br>          <span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span><br><br>          <span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;info-item&quot;</span>&gt;</span><br>            <span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;info-icon school-icon&quot;</span>&gt;</span><br>              <span class="hljs-tag">&lt;<span class="hljs-name">image</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;school-logo-img&quot;</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;/images/ouc-logo.png&quot;</span> <span class="hljs-attr">mode</span>=<span class="hljs-string">&quot;aspectFit&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">image</span>&gt;</span><br>            <span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span><br>            <span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;info-content&quot;</span>&gt;</span><br>              <span class="hljs-tag">&lt;<span class="hljs-name">text</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;info-label&quot;</span>&gt;</span>学校<span class="hljs-tag">&lt;/<span class="hljs-name">text</span>&gt;</span><br>              <span class="hljs-tag">&lt;<span class="hljs-name">text</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;info-value&quot;</span>&gt;</span>中国海洋大学 · 信息学部<span class="hljs-tag">&lt;/<span class="hljs-name">text</span>&gt;</span><br>            <span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span><br>          <span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span><br><br>          <span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;info-item&quot;</span>&gt;</span><br>            <span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;info-icon major-icon&quot;</span>&gt;</span><br>              <span class="hljs-tag">&lt;<span class="hljs-name">text</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;icon-text&quot;</span>&gt;</span>🎓<span class="hljs-tag">&lt;/<span class="hljs-name">text</span>&gt;</span><br>            <span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span><br>            <span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;info-content&quot;</span>&gt;</span><br>              <span class="hljs-tag">&lt;<span class="hljs-name">text</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;info-label&quot;</span>&gt;</span>专业<span class="hljs-tag">&lt;/<span class="hljs-name">text</span>&gt;</span><br>              <span class="hljs-tag">&lt;<span class="hljs-name">text</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;info-value&quot;</span>&gt;</span>智能科学与技术<span class="hljs-tag">&lt;/<span class="hljs-name">text</span>&gt;</span><br>            <span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span><br>          <span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span><br>        <span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span><br>      <span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span><br><br>      <span class="hljs-comment">&lt;!-- 个人介绍卡片 --&gt;</span><br>      <span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;intro-card&quot;</span>&gt;</span><br>        <span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;intro-title&quot;</span>&gt;</span><br>          <span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;title-bar&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span><br>          <span class="hljs-tag">&lt;<span class="hljs-name">text</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;title-text&quot;</span>&gt;</span>关于我<span class="hljs-tag">&lt;/<span class="hljs-name">text</span>&gt;</span><br>        <span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span><br>        <span class="hljs-tag">&lt;<span class="hljs-name">text</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;intro-text&quot;</span>&gt;</span>一名白日梦想家，正在学习移动软件开发，平时听听歌、打打游戏<span class="hljs-tag">&lt;/<span class="hljs-name">text</span>&gt;</span><br>      <span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span><br><br>      <span class="hljs-comment">&lt;!-- 技能标签卡片 --&gt;</span><br>      <span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;skills-card&quot;</span>&gt;</span><br>        <span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;intro-title&quot;</span>&gt;</span><br>          <span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;title-bar&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span><br>          <span class="hljs-tag">&lt;<span class="hljs-name">text</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;title-text&quot;</span>&gt;</span>技能标签<span class="hljs-tag">&lt;/<span class="hljs-name">text</span>&gt;</span><br>        <span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span><br>        <span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;tags-container&quot;</span>&gt;</span><br>          <span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;tag&quot;</span>&gt;</span>Python<span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span><br>          <span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;tag&quot;</span>&gt;</span>微信小程序<span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span><br>          <span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;tag&quot;</span>&gt;</span>前端开发<span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span><br>          <span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;tag&quot;</span>&gt;</span>数据分析<span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span><br>          <span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;tag&quot;</span>&gt;</span>AI应用<span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span><br>        <span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span><br>      <span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span><br><br>      <span class="hljs-comment">&lt;!-- 底部 --&gt;</span><br>      <span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;footer&quot;</span>&gt;</span><br>        <span class="hljs-tag">&lt;<span class="hljs-name">text</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;footer-text&quot;</span>&gt;</span>— 感谢浏览我的名片 —<span class="hljs-tag">&lt;/<span class="hljs-name">text</span>&gt;</span><br>      <span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span><br><br>    <span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span><br>  <span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">scroll-view</span>&gt;</span><br></code></pre></td></tr></table></figure>
+
+<p><strong>页面逻辑（index.js）：</strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-comment">// index.js</span><br><span class="hljs-title class_">Page</span>(&#123;<br>  <span class="hljs-attr">data</span>: &#123;<br>    <span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;贺凡思杰&#x27;</span>,<br>    <span class="hljs-attr">school</span>: <span class="hljs-string">&#x27;中国海洋大学 · 信息学部&#x27;</span>,<br>    <span class="hljs-attr">major</span>: <span class="hljs-string">&#x27;智能科学与技术&#x27;</span>,<br>    <span class="hljs-attr">email</span>: <span class="hljs-string">&#x27;2167316266@qq.com&#x27;</span>,<br>    <span class="hljs-attr">blog</span>: <span class="hljs-string">&#x27;https://commings-jie.github.io/&#x27;</span>,<br>    <span class="hljs-attr">intro</span>: <span class="hljs-string">&#x27;一名白日梦想家，正在学习移动软件开发，平时听听歌、打打游戏&#x27;</span>,<br>    <span class="hljs-attr">skills</span>: [<span class="hljs-string">&#x27;Python&#x27;</span>, <span class="hljs-string">&#x27;微信小程序&#x27;</span>, <span class="hljs-string">&#x27;前端开发&#x27;</span>, <span class="hljs-string">&#x27;数据分析&#x27;</span>, <span class="hljs-string">&#x27;AI应用&#x27;</span>]<br>  &#125;,<br><br>  <span class="hljs-comment">// 复制邮箱到剪贴板</span><br>  <span class="hljs-title function_">onCopyEmail</span>(<span class="hljs-params"></span>) &#123;<br>    wx.<span class="hljs-title function_">setClipboardData</span>(&#123;<br>      <span class="hljs-attr">data</span>: <span class="hljs-variable language_">this</span>.<span class="hljs-property">data</span>.<span class="hljs-property">email</span>,<br>      <span class="hljs-title function_">success</span>(<span class="hljs-params"></span>) &#123;<br>        wx.<span class="hljs-title function_">showToast</span>(&#123;<br>          <span class="hljs-attr">title</span>: <span class="hljs-string">&#x27;邮箱已复制&#x27;</span>,<br>          <span class="hljs-attr">icon</span>: <span class="hljs-string">&#x27;success&#x27;</span>,<br>          <span class="hljs-attr">duration</span>: <span class="hljs-number">1500</span><br>        &#125;)<br>      &#125;<br>    &#125;)<br>  &#125;,<br><br>  <span class="hljs-comment">// 访问个人博客</span><br>  <span class="hljs-title function_">onVisitBlog</span>(<span class="hljs-params"></span>) &#123;<br>    wx.<span class="hljs-title function_">setClipboardData</span>(&#123;<br>      <span class="hljs-attr">data</span>: <span class="hljs-variable language_">this</span>.<span class="hljs-property">data</span>.<span class="hljs-property">blog</span>,<br>      <span class="hljs-title function_">success</span>(<span class="hljs-params"></span>) &#123;<br>        wx.<span class="hljs-title function_">showToast</span>(&#123;<br>          <span class="hljs-attr">title</span>: <span class="hljs-string">&#x27;链接已复制，请在浏览器打开&#x27;</span>,<br>          <span class="hljs-attr">icon</span>: <span class="hljs-string">&#x27;none&#x27;</span>,<br>          <span class="hljs-attr">duration</span>: <span class="hljs-number">2000</span><br>        &#125;)<br>      &#125;<br>    &#125;)<br>  &#125;,<br><br>  <span class="hljs-title function_">onLoad</span>(<span class="hljs-params"></span>) &#123;<br>    wx.<span class="hljs-title function_">setNavigationBarTitle</span>(&#123;<br>      <span class="hljs-attr">title</span>: <span class="hljs-string">&#x27;我的名片&#x27;</span><br>    &#125;)<br>  &#125;,<br><br>  <span class="hljs-title function_">onShareAppMessage</span>(<span class="hljs-params"></span>) &#123;<br>    <span class="hljs-keyword">return</span> &#123;<br>      <span class="hljs-attr">title</span>: <span class="hljs-string">&#x27;贺凡思杰的名片&#x27;</span>,<br>      <span class="hljs-attr">path</span>: <span class="hljs-string">&#x27;/pages/index/index&#x27;</span>,<br>      <span class="hljs-attr">imageUrl</span>: <span class="hljs-string">&#x27;/images/card-header.png&#x27;</span><br>    &#125;<br>  &#125;<br>&#125;)<br></code></pre></td></tr></table></figure>
+
+<p><strong>页面样式（index.wxss）：</strong></p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br><span class="line">195</span><br><span class="line">196</span><br><span class="line">197</span><br><span class="line">198</span><br><span class="line">199</span><br><span class="line">200</span><br><span class="line">201</span><br><span class="line">202</span><br><span class="line">203</span><br><span class="line">204</span><br><span class="line">205</span><br><span class="line">206</span><br><span class="line">207</span><br><span class="line">208</span><br><span class="line">209</span><br><span class="line">210</span><br><span class="line">211</span><br><span class="line">212</span><br><span class="line">213</span><br><span class="line">214</span><br><span class="line">215</span><br><span class="line">216</span><br><span class="line">217</span><br><span class="line">218</span><br><span class="line">219</span><br><span class="line">220</span><br><span class="line">221</span><br><span class="line">222</span><br><span class="line">223</span><br><span class="line">224</span><br><span class="line">225</span><br><span class="line">226</span><br><span class="line">227</span><br><span class="line">228</span><br><span class="line">229</span><br><span class="line">230</span><br><span class="line">231</span><br><span class="line">232</span><br><span class="line">233</span><br><span class="line">234</span><br><span class="line">235</span><br><span class="line">236</span><br><span class="line">237</span><br><span class="line">238</span><br><span class="line">239</span><br><span class="line">240</span><br><span class="line">241</span><br></pre></td><td class="code"><pre><code class="hljs css"><span class="hljs-comment">/**index.wxss**/</span><br><br>page &#123;<br>  <span class="hljs-attribute">height</span>: <span class="hljs-number">100vh</span>;<br>  <span class="hljs-attribute">display</span>: flex;<br>  <span class="hljs-attribute">flex-direction</span>: column;<br>  <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#f5f5f5</span>;<br>&#125;<br><br><span class="hljs-selector-class">.scrollarea</span> &#123;<br>  <span class="hljs-attribute">flex</span>: <span class="hljs-number">1</span>;<br>  <span class="hljs-attribute">overflow-y</span>: hidden;<br>&#125;<br><br><span class="hljs-selector-class">.page-container</span> &#123;<br>  <span class="hljs-attribute">min-height</span>: <span class="hljs-number">100%</span>;<br>  <span class="hljs-attribute">display</span>: flex;<br>  <span class="hljs-attribute">flex-direction</span>: column;<br>&#125;<br><br><span class="hljs-comment">/* 头图 */</span><br><span class="hljs-selector-class">.header-section</span> &#123;<br>  <span class="hljs-attribute">width</span>: <span class="hljs-number">100%</span>;<br>  <span class="hljs-attribute">position</span>: relative;<br>&#125;<br><br><span class="hljs-selector-class">.header-image</span> &#123;<br>  <span class="hljs-attribute">width</span>: <span class="hljs-number">100%</span>;<br>  <span class="hljs-attribute">display</span>: block;<br>&#125;<br><br><span class="hljs-comment">/* 卡片区域 */</span><br><span class="hljs-selector-class">.card-section</span> &#123;<br>  <span class="hljs-attribute">padding</span>: <span class="hljs-number">0</span> <span class="hljs-number">24</span>rpx <span class="hljs-number">40</span>rpx;<br>  <span class="hljs-attribute">margin-top</span>: -<span class="hljs-number">20</span>rpx;<br>  <span class="hljs-attribute">position</span>: relative;<br>  <span class="hljs-attribute">z-index</span>: <span class="hljs-number">1</span>;<br>&#125;<br><br><span class="hljs-comment">/* 个人信息卡片 */</span><br><span class="hljs-selector-class">.info-card</span> &#123;<br>  <span class="hljs-attribute">background</span>: <span class="hljs-number">#ffffff</span>;<br>  <span class="hljs-attribute">border-radius</span>: <span class="hljs-number">24</span>rpx;<br>  <span class="hljs-attribute">padding</span>: <span class="hljs-number">36</span>rpx <span class="hljs-number">32</span>rpx;<br>  <span class="hljs-attribute">box-shadow</span>: <span class="hljs-number">0</span> <span class="hljs-number">4</span>rpx <span class="hljs-number">20</span>rpx <span class="hljs-built_in">rgba</span>(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0.06</span>);<br>&#125;<br><br><span class="hljs-selector-class">.card-header</span> &#123;<br>  <span class="hljs-attribute">display</span>: flex;<br>  <span class="hljs-attribute">align-items</span>: center;<br>  <span class="hljs-attribute">padding-bottom</span>: <span class="hljs-number">24</span>rpx;<br>&#125;<br><br><span class="hljs-selector-class">.avatar-wrapper</span> &#123;<br>  <span class="hljs-attribute">width</span>: <span class="hljs-number">100</span>rpx;<br>  <span class="hljs-attribute">height</span>: <span class="hljs-number">100</span>rpx;<br>  <span class="hljs-attribute">border-radius</span>: <span class="hljs-number">50%</span>;<br>  <span class="hljs-attribute">background</span>: <span class="hljs-built_in">linear-gradient</span>(<span class="hljs-number">135deg</span>, <span class="hljs-number">#1e90ff</span> <span class="hljs-number">0%</span>, <span class="hljs-number">#00bfff</span> <span class="hljs-number">100%</span>);<br>  <span class="hljs-attribute">display</span>: flex;<br>  <span class="hljs-attribute">align-items</span>: center;<br>  <span class="hljs-attribute">justify-content</span>: center;<br>  <span class="hljs-attribute">margin-right</span>: <span class="hljs-number">24</span>rpx;<br>  <span class="hljs-attribute">box-shadow</span>: <span class="hljs-number">0</span> <span class="hljs-number">4</span>rpx <span class="hljs-number">16</span>rpx <span class="hljs-built_in">rgba</span>(<span class="hljs-number">30</span>, <span class="hljs-number">144</span>, <span class="hljs-number">255</span>, <span class="hljs-number">0.2</span>);<br>&#125;<br><br><span class="hljs-selector-class">.avatar-text</span> &#123;<br>  <span class="hljs-attribute">font-size</span>: <span class="hljs-number">44</span>rpx;<br>  <span class="hljs-attribute">color</span>: <span class="hljs-number">#ffffff</span>;<br>  <span class="hljs-attribute">font-weight</span>: bold;<br>&#125;<br><br><span class="hljs-selector-class">.name</span> &#123;<br>  <span class="hljs-attribute">font-size</span>: <span class="hljs-number">40</span>rpx;<br>  <span class="hljs-attribute">color</span>: <span class="hljs-number">#1a1a1a</span>;<br>  <span class="hljs-attribute">font-weight</span>: bold;<br>  <span class="hljs-attribute">letter-spacing</span>: <span class="hljs-number">4</span>rpx;<br>&#125;<br><br><span class="hljs-selector-class">.subtitle</span> &#123;<br>  <span class="hljs-attribute">font-size</span>: <span class="hljs-number">24</span>rpx;<br>  <span class="hljs-attribute">color</span>: <span class="hljs-number">#999999</span>;<br>  <span class="hljs-attribute">margin-top</span>: <span class="hljs-number">8</span>rpx;<br>&#125;<br><br><span class="hljs-selector-class">.divider</span> &#123;<br>  <span class="hljs-attribute">height</span>: <span class="hljs-number">1</span>rpx;<br>  <span class="hljs-attribute">background</span>: <span class="hljs-built_in">linear-gradient</span>(<span class="hljs-number">90deg</span>, transparent, <span class="hljs-number">#e0e0e0</span>, transparent);<br>  <span class="hljs-attribute">margin</span>: <span class="hljs-number">8</span>rpx <span class="hljs-number">0</span> <span class="hljs-number">24</span>rpx;<br>&#125;<br><br><span class="hljs-comment">/* 信息列表 */</span><br><span class="hljs-selector-class">.info-list</span> &#123;<br>  <span class="hljs-attribute">display</span>: flex;<br>  <span class="hljs-attribute">flex-direction</span>: column;<br>  <span class="hljs-attribute">gap</span>: <span class="hljs-number">20</span>rpx;<br>&#125;<br><br><span class="hljs-selector-class">.info-item</span> &#123;<br>  <span class="hljs-attribute">display</span>: flex;<br>  <span class="hljs-attribute">align-items</span>: center;<br>  <span class="hljs-attribute">padding</span>: <span class="hljs-number">20</span>rpx <span class="hljs-number">16</span>rpx;<br>  <span class="hljs-attribute">background</span>: <span class="hljs-number">#f8f9fa</span>;<br>  <span class="hljs-attribute">border-radius</span>: <span class="hljs-number">16</span>rpx;<br>&#125;<br><br><span class="hljs-selector-class">.info-item</span><span class="hljs-selector-pseudo">:active</span> &#123;<br>  <span class="hljs-attribute">background</span>: <span class="hljs-number">#eef4ff</span>;<br>&#125;<br><br><span class="hljs-selector-class">.info-icon</span> &#123;<br>  <span class="hljs-attribute">width</span>: <span class="hljs-number">72</span>rpx;<br>  <span class="hljs-attribute">height</span>: <span class="hljs-number">72</span>rpx;<br>  <span class="hljs-attribute">border-radius</span>: <span class="hljs-number">16</span>rpx;<br>  <span class="hljs-attribute">display</span>: flex;<br>  <span class="hljs-attribute">align-items</span>: center;<br>  <span class="hljs-attribute">justify-content</span>: center;<br>  <span class="hljs-attribute">margin-right</span>: <span class="hljs-number">20</span>rpx;<br>  <span class="hljs-attribute">flex-shrink</span>: <span class="hljs-number">0</span>;<br>&#125;<br><br><span class="hljs-selector-class">.email-icon</span> &#123; <span class="hljs-attribute">background</span>: <span class="hljs-number">#e8f0fe</span>; &#125;<br><span class="hljs-selector-class">.web-icon</span> &#123; <span class="hljs-attribute">background</span>: <span class="hljs-number">#e6f7ff</span>; &#125;<br><span class="hljs-selector-class">.school-icon</span> &#123; <span class="hljs-attribute">background</span>: <span class="hljs-number">#f0f5ff</span>; &#125;<br><span class="hljs-selector-class">.major-icon</span> &#123; <span class="hljs-attribute">background</span>: <span class="hljs-number">#f5f0ff</span>; &#125;<br><br><span class="hljs-selector-class">.icon-text</span> &#123; <span class="hljs-attribute">font-size</span>: <span class="hljs-number">32</span>rpx; &#125;<br><br><span class="hljs-selector-class">.school-logo-img</span> &#123;<br>  <span class="hljs-attribute">width</span>: <span class="hljs-number">68</span>rpx;<br>  <span class="hljs-attribute">height</span>: <span class="hljs-number">68</span>rpx;<br>&#125;<br><br><span class="hljs-selector-class">.info-content</span> &#123;<br>  <span class="hljs-attribute">flex</span>: <span class="hljs-number">1</span>;<br>  <span class="hljs-attribute">display</span>: flex;<br>  <span class="hljs-attribute">flex-direction</span>: column;<br>  <span class="hljs-attribute">min-width</span>: <span class="hljs-number">0</span>;<br>&#125;<br><br><span class="hljs-selector-class">.info-label</span> &#123;<br>  <span class="hljs-attribute">font-size</span>: <span class="hljs-number">22</span>rpx;<br>  <span class="hljs-attribute">color</span>: <span class="hljs-number">#999999</span>;<br>  <span class="hljs-attribute">margin-bottom</span>: <span class="hljs-number">4</span>rpx;<br>&#125;<br><br><span class="hljs-selector-class">.info-value</span> &#123;<br>  <span class="hljs-attribute">font-size</span>: <span class="hljs-number">26</span>rpx;<br>  <span class="hljs-attribute">color</span>: <span class="hljs-number">#333333</span>;<br>  <span class="hljs-attribute">overflow</span>: hidden;<br>  <span class="hljs-attribute">text-overflow</span>: ellipsis;<br>  <span class="hljs-attribute">white-space</span>: nowrap;<br>&#125;<br><br><span class="hljs-selector-class">.info-action</span> &#123;<br>  <span class="hljs-attribute">padding</span>: <span class="hljs-number">8</span>rpx <span class="hljs-number">20</span>rpx;<br>  <span class="hljs-attribute">background</span>: <span class="hljs-number">#e8f0fe</span>;<br>  <span class="hljs-attribute">border-radius</span>: <span class="hljs-number">24</span>rpx;<br>  <span class="hljs-attribute">flex-shrink</span>: <span class="hljs-number">0</span>;<br>  <span class="hljs-attribute">margin-left</span>: <span class="hljs-number">16</span>rpx;<br>&#125;<br><br><span class="hljs-selector-class">.action-text</span> &#123;<br>  <span class="hljs-attribute">font-size</span>: <span class="hljs-number">22</span>rpx;<br>  <span class="hljs-attribute">color</span>: <span class="hljs-number">#1e90ff</span>;<br>&#125;<br><br><span class="hljs-comment">/* 关于我卡片 */</span><br><span class="hljs-selector-class">.intro-card</span> &#123;<br>  <span class="hljs-attribute">background</span>: <span class="hljs-number">#ffffff</span>;<br>  <span class="hljs-attribute">border-radius</span>: <span class="hljs-number">24</span>rpx;<br>  <span class="hljs-attribute">padding</span>: <span class="hljs-number">36</span>rpx <span class="hljs-number">32</span>rpx;<br>  <span class="hljs-attribute">margin-top</span>: <span class="hljs-number">24</span>rpx;<br>  <span class="hljs-attribute">box-shadow</span>: <span class="hljs-number">0</span> <span class="hljs-number">4</span>rpx <span class="hljs-number">20</span>rpx <span class="hljs-built_in">rgba</span>(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0.06</span>);<br>&#125;<br><br><span class="hljs-selector-class">.intro-title</span> &#123;<br>  <span class="hljs-attribute">display</span>: flex;<br>  <span class="hljs-attribute">align-items</span>: center;<br>  <span class="hljs-attribute">margin-bottom</span>: <span class="hljs-number">20</span>rpx;<br>&#125;<br><br><span class="hljs-selector-class">.title-bar</span> &#123;<br>  <span class="hljs-attribute">width</span>: <span class="hljs-number">6</span>rpx;<br>  <span class="hljs-attribute">height</span>: <span class="hljs-number">32</span>rpx;<br>  <span class="hljs-attribute">background</span>: <span class="hljs-built_in">linear-gradient</span>(<span class="hljs-number">180deg</span>, <span class="hljs-number">#1e90ff</span>, <span class="hljs-number">#00bfff</span>);<br>  <span class="hljs-attribute">border-radius</span>: <span class="hljs-number">3</span>rpx;<br>  <span class="hljs-attribute">margin-right</span>: <span class="hljs-number">16</span>rpx;<br>&#125;<br><br><span class="hljs-selector-class">.title-text</span> &#123;<br>  <span class="hljs-attribute">font-size</span>: <span class="hljs-number">32</span>rpx;<br>  <span class="hljs-attribute">color</span>: <span class="hljs-number">#1a1a1a</span>;<br>  <span class="hljs-attribute">font-weight</span>: bold;<br>&#125;<br><br><span class="hljs-selector-class">.intro-text</span> &#123;<br>  <span class="hljs-attribute">font-size</span>: <span class="hljs-number">26</span>rpx;<br>  <span class="hljs-attribute">color</span>: <span class="hljs-number">#666666</span>;<br>  <span class="hljs-attribute">line-height</span>: <span class="hljs-number">1.8</span>;<br>  <span class="hljs-attribute">text-align</span>: justify;<br>&#125;<br><br><span class="hljs-comment">/* 技能标签卡片 */</span><br><span class="hljs-selector-class">.skills-card</span> &#123;<br>  <span class="hljs-attribute">background</span>: <span class="hljs-number">#ffffff</span>;<br>  <span class="hljs-attribute">border-radius</span>: <span class="hljs-number">24</span>rpx;<br>  <span class="hljs-attribute">padding</span>: <span class="hljs-number">36</span>rpx <span class="hljs-number">32</span>rpx;<br>  <span class="hljs-attribute">margin-top</span>: <span class="hljs-number">24</span>rpx;<br>  <span class="hljs-attribute">box-shadow</span>: <span class="hljs-number">0</span> <span class="hljs-number">4</span>rpx <span class="hljs-number">20</span>rpx <span class="hljs-built_in">rgba</span>(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0.06</span>);<br>&#125;<br><br><span class="hljs-selector-class">.tags-container</span> &#123;<br>  <span class="hljs-attribute">display</span>: flex;<br>  <span class="hljs-attribute">flex-wrap</span>: wrap;<br>  <span class="hljs-attribute">gap</span>: <span class="hljs-number">16</span>rpx;<br>&#125;<br><br><span class="hljs-selector-class">.tag</span> &#123;<br>  <span class="hljs-attribute">padding</span>: <span class="hljs-number">12</span>rpx <span class="hljs-number">28</span>rpx;<br>  <span class="hljs-attribute">background</span>: <span class="hljs-number">#e8f0fe</span>;<br>  <span class="hljs-attribute">border-radius</span>: <span class="hljs-number">32</span>rpx;<br>  <span class="hljs-attribute">font-size</span>: <span class="hljs-number">24</span>rpx;<br>  <span class="hljs-attribute">color</span>: <span class="hljs-number">#1e90ff</span>;<br>&#125;<br><br><span class="hljs-selector-class">.tag</span><span class="hljs-selector-pseudo">:active</span> &#123;<br>  <span class="hljs-attribute">background</span>: <span class="hljs-number">#d0e4ff</span>;<br>&#125;<br><br><span class="hljs-comment">/* 底部 */</span><br><span class="hljs-selector-class">.footer</span> &#123;<br>  <span class="hljs-attribute">display</span>: flex;<br>  <span class="hljs-attribute">justify-content</span>: center;<br>  <span class="hljs-attribute">padding</span>: <span class="hljs-number">48</span>rpx <span class="hljs-number">0</span> <span class="hljs-number">24</span>rpx;<br>&#125;<br><br><span class="hljs-selector-class">.footer-text</span> &#123;<br>  <span class="hljs-attribute">font-size</span>: <span class="hljs-number">24</span>rpx;<br>  <span class="hljs-attribute">color</span>: <span class="hljs-number">#cccccc</span>;<br>  <span class="hljs-attribute">letter-spacing</span>: <span class="hljs-number">4</span>rpx;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p><strong>全局配置（app.json）：</strong></p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><code class="hljs json"><span class="hljs-punctuation">&#123;</span><br>  <span class="hljs-attr">&quot;pages&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">[</span><br>    <span class="hljs-string">&quot;pages/index/index&quot;</span><br>  <span class="hljs-punctuation">]</span><span class="hljs-punctuation">,</span><br>  <span class="hljs-attr">&quot;window&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">&#123;</span><br>    <span class="hljs-attr">&quot;navigationBarTextStyle&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;black&quot;</span><span class="hljs-punctuation">,</span><br>    <span class="hljs-attr">&quot;navigationStyle&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;custom&quot;</span><span class="hljs-punctuation">,</span><br>    <span class="hljs-attr">&quot;backgroundColor&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;#f5f5f5&quot;</span><br>  <span class="hljs-punctuation">&#125;</span><span class="hljs-punctuation">,</span><br>  <span class="hljs-attr">&quot;style&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;v2&quot;</span><span class="hljs-punctuation">,</span><br>  <span class="hljs-attr">&quot;renderer&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;skyline&quot;</span><span class="hljs-punctuation">,</span><br>  <span class="hljs-attr">&quot;rendererOptions&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">&#123;</span><br>    <span class="hljs-attr">&quot;skyline&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">&#123;</span><br>      <span class="hljs-attr">&quot;defaultDisplayBlock&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-literal"><span class="hljs-keyword">true</span></span><span class="hljs-punctuation">,</span><br>      <span class="hljs-attr">&quot;defaultContentBox&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-literal"><span class="hljs-keyword">true</span></span><span class="hljs-punctuation">,</span><br>      <span class="hljs-attr">&quot;tagNameStyleIsolation&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;legacy&quot;</span><span class="hljs-punctuation">,</span><br>      <span class="hljs-attr">&quot;disableABTest&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-literal"><span class="hljs-keyword">true</span></span><span class="hljs-punctuation">,</span><br>      <span class="hljs-attr">&quot;sdkVersionBegin&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;3.0.0&quot;</span><span class="hljs-punctuation">,</span><br>      <span class="hljs-attr">&quot;sdkVersionEnd&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;15.255.255&quot;</span><br>    <span class="hljs-punctuation">&#125;</span><br>  <span class="hljs-punctuation">&#125;</span><span class="hljs-punctuation">,</span><br>  <span class="hljs-attr">&quot;componentFramework&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;glass-easel&quot;</span><span class="hljs-punctuation">,</span><br>  <span class="hljs-attr">&quot;sitemapLocation&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;sitemap.json&quot;</span><span class="hljs-punctuation">,</span><br>  <span class="hljs-attr">&quot;lazyCodeLoading&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;requiredComponents&quot;</span><br><span class="hljs-punctuation">&#125;</span><br></code></pre></td></tr></table></figure>
+
+<h4 id="1-3-3-功能说明"><a href="#1-3-3-功能说明" class="headerlink" title="1.3.3 功能说明"></a>1.3.3 功能说明</h4><table>
+<thead>
+<tr>
+<th>功能</th>
+<th>实现方式</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>AI头图展示</td>
+<td><code>&lt;image&gt;</code> 组件，<code>src=&quot;/images/card-header.png&quot;</code>，<code>mode=&quot;widthFix&quot;</code></td>
+</tr>
+<tr>
+<td>个人信息卡片</td>
+<td>头像（渐变圆形 + 姓氏）、姓名、专业，Flex 布局</td>
+</tr>
+<tr>
+<td>邮箱复制</td>
+<td><code>wx.setClipboardData()</code> API，点击后提示”邮箱已复制”</td>
+</tr>
+<tr>
+<td>博客链接复制</td>
+<td><code>wx.setClipboardData()</code> API，点击后提示”链接已复制”</td>
+</tr>
+<tr>
+<td>校徽图标</td>
+<td><code>&lt;image&gt;</code> 组件加载 <code>ouc-logo.png</code>，<code>mode=&quot;aspectFit&quot;</code></td>
+</tr>
+<tr>
+<td>关于我</td>
+<td>纯文本展示个人简介</td>
+</tr>
+<tr>
+<td>技能标签</td>
+<td><code>flex-wrap</code> 实现标签自动换行排列</td>
+</tr>
+</tbody></table>
+<h4 id="1-3-4-运行效果"><a href="#1-3-4-运行效果" class="headerlink" title="1.3.4 运行效果"></a>1.3.4 运行效果</h4><p><img src="/img/%E8%BF%90%E8%A1%8C%E6%88%AA%E5%9B%BE.png" srcset="/img/loading.gif" lazyload alt="运行截图"></p>
+<p><img src="/img/%E8%BF%90%E8%A1%8C%E6%88%AA%E5%9B%BE2.png" srcset="/img/loading.gif" lazyload alt="运行截图2"></p>
+<h3 id="1-4-关键技术点"><a href="#1-4-关键技术点" class="headerlink" title="1.4 关键技术点"></a>1.4 关键技术点</h3><ol>
+<li><strong>AI 生成头图</strong>：使用 AI 绘图工具生成 16:9 比例的个人名片头图，作为小程序的视觉主体</li>
+<li><strong>数据绑定与事件处理</strong>：通过 <code>&#123;&#123;&#125;&#125;</code> 语法绑定数据，<code>bindtap</code> 绑定点击事件，<code>setData()</code> 更新视图</li>
+<li><strong>剪贴板 API</strong>：使用 <code>wx.setClipboardData()</code> 实现邮箱和博客链接的一键复制功能</li>
+<li><strong>Flex 布局</strong>：大量使用 Flex 布局实现卡片、列表、标签的响应式排版</li>
+<li><strong>rpx 响应式单位</strong>：所有尺寸使用 rpx，适配不同屏幕尺寸</li>
+<li><strong>滚动效果实现</strong>：使用 <code>&lt;scroll-view&gt;</code> 组件实现页面滚动，设置 <code>scroll-y</code> 属性允许纵向滚动，<code>type=&quot;list&quot;</code> 启用虚拟列表优化长列表性能，配合 <code>overflow-y: hidden</code> 控制滚动区域</li>
+</ol>
+<h2 id="二、问题总结与体会"><a href="#二、问题总结与体会" class="headerlink" title="二、问题总结与体会"></a>二、问题总结与体会</h2><h3 id="2-1-遇到的问题及解决方案"><a href="#2-1-遇到的问题及解决方案" class="headerlink" title="2.1 遇到的问题及解决方案"></a>2.1 遇到的问题及解决方案</h3><p><strong>问题1：头图与卡片之间的间距不自然</strong></p>
+<ul>
+<li><strong>现象</strong>：头图下方直接接卡片，视觉上缺乏层次感</li>
+<li><strong>原因</strong>：卡片区域没有设置负边距来覆盖头图底部</li>
+<li><strong>解决</strong>：给 <code>.card-section</code> 设置 <code>margin-top: -20rpx</code>，让卡片微微上移覆盖头图底部，形成自然的过渡效果</li>
+</ul>
+<p><strong>问题2：校徽图标尺寸不合适</strong></p>
+<ul>
+<li><strong>现象</strong>：校徽图片在图标区域中显示过小，不够醒目</li>
+<li><strong>原因</strong>：图标区域固定为 72rpx × 72rpx，但图片尺寸设置过小</li>
+<li><strong>解决</strong>：保持图标区域大小不变（与其他图标一致），将校徽图片放大到 68rpx × 68rpx，几乎填满整个区域</li>
+</ul>
+<p><strong>问题3：如何实现页面滚动效果</strong></p>
+<ul>
+<li><strong>现象</strong>：页面内容超出屏幕高度时，需要实现纵向滚动</li>
+<li><strong>原因</strong>：小程序默认页面不会自动滚动，需要使用专门的滚动组件</li>
+<li><strong>解决</strong>：<ol>
+<li>使用 <code>&lt;scroll-view&gt;</code> 组件包裹页面内容</li>
+<li>设置 <code>scroll-y</code> 属性允许纵向滚动</li>
+<li>设置 <code>type=&quot;list&quot;</code> 启用虚拟列表模式，优化长列表性能</li>
+<li>在 WXSS 中给 <code>.scrollarea</code> 设置 <code>flex: 1</code> 和 <code>overflow-y: hidden</code>，确保滚动区域占满剩余空间</li>
+<li>注意：<code>scroll-view</code> 必须设置明确的高度才能生效，通过 Flex 布局让其自适应父容器高度</li>
+</ol>
+</li>
+</ul>
+<h3 id="2-2-收获与体会"><a href="#2-2-收获与体会" class="headerlink" title="2.2 收获与体会"></a>2.2 收获与体会</h3><ol>
+<li><strong>掌握了小程序的完整开发流程</strong>：从项目创建、页面设计、样式编写到功能实现，对小程序开发有了更系统的认识</li>
+<li><strong>学会了 AI 辅助设计</strong>：使用 AI 工具生成名片头图，体会到 AI 在设计和开发中的辅助价值</li>
+<li><strong>熟悉了微信 API 的使用</strong>：通过实现邮箱复制、链接复制等功能，掌握了<code>wx.setClipboardData()</code> 等常用 API</li>
+<li><strong>提升了 UI 设计能力</strong>：通过卡片式布局、渐变色彩、阴影效果等设计手法，提升了小程序的视觉美感</li>
+<li><strong>体会到了迭代优化的重要性</strong>：在开发过程中多次调整样式和布局，认识到好的 UI 需要不断打磨</li>
+</ol>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/" class="print-no-link">#微信小程序</a>
+      
+        <a href="/tags/%E5%AE%9E%E9%AA%8C%E6%8A%A5%E5%91%8A/" class="print-no-link">#实验报告</a>
+      
+        <a href="/tags/%E7%A7%BB%E5%8A%A8%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/" class="print-no-link">#移动软件开发</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>实验2：个人名片小程序</div>
+      <div>http://example.com/2026/08/24/实验2-个人名片小程序/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>Jie</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2026年8月24日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-cc-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2026/08/24/%E5%AE%9E%E9%AA%8C%E6%8A%A5%E5%91%8A/" title="实验1：热身运动——Hello World小程序">
+                        <span class="hidden-mobile">实验1：热身运动——Hello World小程序</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> <div style="font-size: 0.85rem"> <span id="website-duration">载入网站运行时间...</span> <script src="/js/duration.js"></script> </div>     
+    </div>
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+
+
+
+  
+    
+      <script  src="/js/img-lazyload.js" ></script>
+    
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/5.0.0/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+  
+<script src="/star.js"></script>
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+<!-- hexo injector body_end start --><script src="/js/backgroundize.js"></script><!-- hexo injector body_end end --></body>
+</html>
