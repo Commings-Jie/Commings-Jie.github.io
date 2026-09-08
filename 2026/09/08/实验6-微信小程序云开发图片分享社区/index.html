@@ -1,0 +1,883 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=light>
+
+
+
+<head>
+  <meta charset="UTF-8">
+
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
+  <link rel="icon" href="/img/fluid.png">
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="Jie">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="姓名：贺凡思杰  学号：24020007043     姓名和学号？ 贺凡思杰，24020007043    本实验属于哪门课程？ 中国海洋大学26夏《移动软件开发》   实验名称？ 实验6：微信小程序云开发——图片分享社区   博客地址？ https:&#x2F;&#x2F;commings-jie.github.io&#x2F;   Github仓库地址？ https:&#x2F;&#x2F;github.com&#x2F;Commings-Jie&#x2F;w">
+<meta property="og:type" content="article">
+<meta property="og:title" content="实验6：微信小程序云开发——图片分享社区">
+<meta property="og:url" content="http://example.com/2026/09/08/%E5%AE%9E%E9%AA%8C6-%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E4%BA%91%E5%BC%80%E5%8F%91%E5%9B%BE%E7%89%87%E5%88%86%E4%BA%AB%E7%A4%BE%E5%8C%BA/index.html">
+<meta property="og:site_name" content="Commings-Jie">
+<meta property="og:description" content="姓名：贺凡思杰  学号：24020007043     姓名和学号？ 贺凡思杰，24020007043    本实验属于哪门课程？ 中国海洋大学26夏《移动软件开发》   实验名称？ 实验6：微信小程序云开发——图片分享社区   博客地址？ https:&#x2F;&#x2F;commings-jie.github.io&#x2F;   Github仓库地址？ https:&#x2F;&#x2F;github.com&#x2F;Commings-Jie&#x2F;w">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/img/lab6-home.png">
+<meta property="article:published_time" content="2026-09-08T10:10:00.000Z">
+<meta property="article:modified_time" content="2026-09-08T10:18:35.985Z">
+<meta property="article:author" content="Jie">
+<meta property="article:tag" content="微信小程序">
+<meta property="article:tag" content="实验报告">
+<meta property="article:tag" content="移动软件开发">
+<meta property="article:tag" content="云开发">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="http://example.com/img/lab6-home.png">
+  
+  
+  
+  <title>实验6：微信小程序云开发——图片分享社区 | Commings-Jie</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1749284_5i9bdhy70f8.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1736178_k526ubmyhba.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+  
+<link rel="stylesheet" href="https://jsd.cdn.zzko.cn/gh/EmoryHuang/BlogBeautify@1.1/scroll.css">
+<link rel="stylesheet" href="https://jsd.cdn.zzko.cn/gh/EmoryHuang/BlogBeautify@1.1/gradient.css">
+<link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/lxgw-wenkai-screen-webfont/1.7.0/style.min.css">
+<link rel="stylesheet" href="/css/glassbg.css">
+<link rel="stylesheet" href="/css/Test.css">
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.8","typing":{"enable":false,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":true,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body><!-- hexo injector body_begin start --><div id="web_bg"></div><!-- hexo injector body_begin end -->
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 100vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>可乐不沾冰</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/beach-bg.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle">实验6：微信小程序云开发——图片分享社区</span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2026-09-08 18:10" pubdate>
+          2026年9月8日 晚上
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          5.5k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          47 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+        <div class="scroll-down-bar">
+          <i class="iconfont icon-arrowdown"></i>
+        </div>
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">实验6：微信小程序云开发——图片分享社区</h1>
+            
+              <p id="updated-time" class="note note-info" style="">
+                
+                  
+                    本文最后更新于 2026年9月8日 晚上
+                  
+                
+              </p>
+            
+            
+              <div class="markdown-body">
+                
+                <center>姓名：贺凡思杰  学号：24020007043</center>
+
+<table>
+<thead>
+<tr>
+<th>姓名和学号？</th>
+<th>贺凡思杰，24020007043</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>本实验属于哪门课程？</td>
+<td>中国海洋大学26夏《移动软件开发》</td>
+</tr>
+<tr>
+<td>实验名称？</td>
+<td>实验6：微信小程序云开发——图片分享社区</td>
+</tr>
+<tr>
+<td>博客地址？</td>
+<td><a target="_blank" rel="noopener" href="https://commings-jie.github.io/">https://commings-jie.github.io/</a></td>
+</tr>
+<tr>
+<td>Github仓库地址？</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/Commings-Jie/weixin-xiaochengxu">https://github.com/Commings-Jie/weixin-xiaochengxu</a></td>
+</tr>
+</tbody></table>
+<h2 id="一、实验内容"><a href="#一、实验内容" class="headerlink" title="一、实验内容"></a>一、实验内容</h2><h3 id="1-1-实验环境准备"><a href="#1-1-实验环境准备" class="headerlink" title="1.1 实验环境准备"></a>1.1 实验环境准备</h3><ul>
+<li><strong>操作系统</strong>：Windows 11</li>
+<li><strong>开发工具</strong>：微信开发者工具稳定版（基础库 3.17.2）</li>
+<li><strong>后端服务</strong>：微信云开发（云数据库 + 云存储 + 云函数）</li>
+<li><strong>云开发环境 ID</strong>：<code>cloud1-d4g1avw2tea6fe5fd</code></li>
+<li><strong>数据库集合</strong>：<code>photos</code>（权限：所有用户可读，仅创建者及管理员可写）</li>
+</ul>
+<h3 id="1-2-实验任务"><a href="#1-2-实验任务" class="headerlink" title="1.2 实验任务"></a>1.2 实验任务</h3><p>本实验综合应用小程序云开发的基础知识，制作一个<strong>图片分享社区</strong>小程序：</p>
+<ol>
+<li>使用「小程序·云开发」模板初始化项目，在云开发控制台创建 <code>photos</code> 云数据库集合并设置权限；</li>
+<li>设计并实现 <strong>首页（图片流列表）</strong>、<strong>上传图片页</strong>、<strong>图片展示页</strong>、<strong>个人主页</strong> 四个页面；</li>
+<li>通过<strong>云存储</strong>上传图片，通过<strong>云数据库</strong>记录图片地址、上传者信息与上传日期；</li>
+<li>编写<strong>云函数</strong> <code>getOpenid</code> 获取用户 openid，掌握云函数的创建、部署与调用；</li>
+<li>实现首页图片列表展示、点击头像跳转个人主页、点击图片进入展示页、下载&#x2F;分享&#x2F;全屏预览等功能。</li>
+</ol>
+<p>在完成教材基础功能之外，本实验还额外增强了：services 三层分层架构、云函数单入口路由、删除功能与越权防护、多图上传与压缩、分页加载、头像昵称填写能力登录（新账号 uid 体系）、QQ空间风格的首页改版等（详见 1.3）。</p>
+<h3 id="1-3-小程序实现"><a href="#1-3-小程序实现" class="headerlink" title="1.3 小程序实现"></a>1.3 小程序实现</h3><h4 id="1-3-1-项目文件结构"><a href="#1-3-1-项目文件结构" class="headerlink" title="1.3.1 项目文件结构"></a>1.3.1 项目文件结构</h4><figure class="highlight axapta"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><code class="hljs axapta">实验六/<br>├── cloudfunctions/<br>│   └── photos/                   <span class="hljs-meta"># 云函数统一入口（一个函数，内部按 type 路由）</span><br>│       ├── <span class="hljs-keyword">index</span>.js              <span class="hljs-meta"># 路由分发（switch(event.type)）</span><br>│       ├── getOpenid/<span class="hljs-keyword">index</span>.js    <span class="hljs-meta"># 取 openid</span><br>│       ├── addPhoto/<span class="hljs-keyword">index</span>.js     <span class="hljs-meta"># 写库（服务端时间戳 + 字段白名单 + uid）</span><br>│       ├── delPhoto/<span class="hljs-keyword">index</span>.js     <span class="hljs-meta"># 删库 + 删云存储（归属双重校验）</span><br>│       ├── getStats/<span class="hljs-keyword">index</span>.js     <span class="hljs-meta"># 社区 / 个人统计（聚合）</span><br>│       └── incView/<span class="hljs-keyword">index</span>.js      <span class="hljs-meta"># 浏览量 +1</span><br>├── miniprogram/<br>│   ├── app.js                    <span class="hljs-meta"># 云初始化、登录态恢复</span><br>│   ├── app.json                  <span class="hljs-meta"># 全局配置（页面路由、tabBar）</span><br>│   ├── app.wxss                  <span class="hljs-meta"># 全局公共样式</span><br>│   ├── images/<br>│   │   ├── avatar.png            <span class="hljs-meta"># 默认头像</span><br>│   │   └── tab/                  <span class="hljs-meta"># tabBar 图标（home/mine，选中/未选中）</span><br>│   ├── components/<br>│   │   └── photo-card/           <span class="hljs-meta"># 图片说说卡片组件（首页/我的复用）</span><br>│   ├── pages/<br>│   │   ├── <span class="hljs-keyword">index</span>/                <span class="hljs-meta"># 首页（tab1）：社区图片流 + 发说说入口</span><br>│   │   ├── homepage/             <span class="hljs-meta"># 我的（tab2）：登录引导 + 我的说说</span><br>│   │   ├── add/                  <span class="hljs-meta"># 上传图片页（多选/压缩/历史）</span><br>│   │   ├── detail/               <span class="hljs-meta"># 图片展示页（下载/分享/预览/删除）</span><br>│   │   └── login/                <span class="hljs-meta"># 登录页（chooseAvatar + type=nickname）</span><br>│   ├── services/<br>│   │   ├── api.js                <span class="hljs-meta"># 统一数据出口（页面只依赖这一层）</span><br>│   │   ├── cloud.js              <span class="hljs-meta"># 唯一直接调用 wx.cloud.* 的地方</span><br>│   │   └── user.js               <span class="hljs-meta"># 登录态与账号（uid）管理</span><br>│   └── utils/<br>│       ├── config.js             <span class="hljs-meta"># 配置集中管理（环境ID/集合名/分页/缓存key）</span><br>│       └── util.js               <span class="hljs-meta"># 时间格式化 + toast/loading 封装 + 云路径生成</span><br>├── project.config.json           <span class="hljs-meta"># 项目配置（appid、miniprogramRoot 等）</span><br>└── gen_tab_icons.py              <span class="hljs-meta"># 生成 tabBar 图标的辅助脚本（PIL）</span><br></code></pre></td></tr></table></figure>
+
+<h4 id="1-3-2-核心代码"><a href="#1-3-2-核心代码" class="headerlink" title="1.3.2 核心代码"></a>1.3.2 核心代码</h4><p><strong>① 全局配置（app.json）——页面注册与 tabBar：</strong></p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><code class="hljs json"><span class="hljs-punctuation">&#123;</span><br>  <span class="hljs-attr">&quot;pages&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">[</span><br>    <span class="hljs-string">&quot;pages/index/index&quot;</span><span class="hljs-punctuation">,</span><br>    <span class="hljs-string">&quot;pages/homepage/homepage&quot;</span><span class="hljs-punctuation">,</span><br>    <span class="hljs-string">&quot;pages/detail/detail&quot;</span><span class="hljs-punctuation">,</span><br>    <span class="hljs-string">&quot;pages/add/add&quot;</span><span class="hljs-punctuation">,</span><br>    <span class="hljs-string">&quot;pages/login/login&quot;</span><br>  <span class="hljs-punctuation">]</span><span class="hljs-punctuation">,</span><br>  <span class="hljs-attr">&quot;window&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">&#123;</span><br>    <span class="hljs-attr">&quot;backgroundColor&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;#F6F6F6&quot;</span><span class="hljs-punctuation">,</span><br>    <span class="hljs-attr">&quot;navigationBarBackgroundColor&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;#4A90D9&quot;</span><span class="hljs-punctuation">,</span><br>    <span class="hljs-attr">&quot;navigationBarTitleText&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;图片分享社区&quot;</span><span class="hljs-punctuation">,</span><br>    <span class="hljs-attr">&quot;navigationBarTextStyle&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;white&quot;</span><br>  <span class="hljs-punctuation">&#125;</span><span class="hljs-punctuation">,</span><br>  <span class="hljs-attr">&quot;tabBar&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">&#123;</span><br>    <span class="hljs-attr">&quot;color&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;#999999&quot;</span><span class="hljs-punctuation">,</span><br>    <span class="hljs-attr">&quot;selectedColor&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;#4A90D9&quot;</span><span class="hljs-punctuation">,</span><br>    <span class="hljs-attr">&quot;list&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">[</span><br>      <span class="hljs-punctuation">&#123;</span> <span class="hljs-attr">&quot;pagePath&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;pages/index/index&quot;</span><span class="hljs-punctuation">,</span> <span class="hljs-attr">&quot;text&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;首页&quot;</span><span class="hljs-punctuation">,</span><br>        <span class="hljs-attr">&quot;iconPath&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;images/tab/home.png&quot;</span><span class="hljs-punctuation">,</span> <span class="hljs-attr">&quot;selectedIconPath&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;images/tab/home_on.png&quot;</span> <span class="hljs-punctuation">&#125;</span><span class="hljs-punctuation">,</span><br>      <span class="hljs-punctuation">&#123;</span> <span class="hljs-attr">&quot;pagePath&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;pages/homepage/homepage&quot;</span><span class="hljs-punctuation">,</span> <span class="hljs-attr">&quot;text&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;我的&quot;</span><span class="hljs-punctuation">,</span><br>        <span class="hljs-attr">&quot;iconPath&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;images/tab/mine.png&quot;</span><span class="hljs-punctuation">,</span> <span class="hljs-attr">&quot;selectedIconPath&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;images/tab/mine_on.png&quot;</span> <span class="hljs-punctuation">&#125;</span><br>    <span class="hljs-punctuation">]</span><br>  <span class="hljs-punctuation">&#125;</span><br><span class="hljs-punctuation">&#125;</span><br></code></pre></td></tr></table></figure>
+
+<p>将首页与个人主页作为 tabBar 两个标签页（教材中个人主页由首页头像跳转进入），tabBar 图标用 PIL 脚本 <code>gen_tab_icons.py</code> 生成 81×81 的实心 PNG（未选中灰、选中蓝）。</p>
+<p><strong>② 云开发环境初始化（app.js &#x2F; utils&#x2F;config.js）：</strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-comment">// app.js —— 启动时初始化云环境，并恢复上次登录态</span><br><span class="hljs-title class_">App</span>(&#123;<br>  <span class="hljs-attr">onLaunch</span>: <span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) &#123;<br>    wx.<span class="hljs-property">cloud</span>.<span class="hljs-title function_">init</span>(&#123; <span class="hljs-attr">env</span>: config.<span class="hljs-property">CLOUD_ENV</span>, <span class="hljs-attr">traceUser</span>: <span class="hljs-literal">true</span> &#125;);<br>    <span class="hljs-keyword">const</span> profile = user.<span class="hljs-title function_">init</span>();           <span class="hljs-comment">// 读本地缓存恢复登录态</span><br>    <span class="hljs-keyword">if</span> (profile) &#123;<br>      <span class="hljs-variable language_">this</span>.<span class="hljs-property">globalData</span>.<span class="hljs-property">userInfo</span> = profile;<br>      <span class="hljs-variable language_">this</span>.<span class="hljs-property">globalData</span>.<span class="hljs-property">openid</span> = profile.<span class="hljs-property">openid</span>;<br>    &#125;<br>  &#125;,<br>  <span class="hljs-attr">ensureOpenid</span>: <span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) &#123; ... &#125;        <span class="hljs-comment">// 懒加载 openid，需要时才调云函数</span><br>&#125;)<br></code></pre></td></tr></table></figure>
+
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-comment">// utils/config.js —— 环境 ID、集合名、分页等全部集中，部署时只改这一处</span><br><span class="hljs-keyword">const</span> <span class="hljs-variable constant_">CLOUD_ENV</span> = <span class="hljs-string">&quot;cloud1-d4g1avw2tea6fe5fd&quot;</span>;<br><span class="hljs-keyword">const</span> <span class="hljs-variable constant_">COLLECTIONS</span> = &#123; <span class="hljs-attr">PHOTOS</span>: <span class="hljs-string">&quot;photos&quot;</span> &#125;;<br><span class="hljs-keyword">const</span> <span class="hljs-variable constant_">PAGE_SIZE</span> = <span class="hljs-number">20</span>;          <span class="hljs-comment">// 云数据库单次 get() 上限</span><br><span class="hljs-keyword">const</span> <span class="hljs-variable constant_">MAX_UPLOAD</span> = <span class="hljs-number">9</span>;          <span class="hljs-comment">// 单次最多选图数</span><br></code></pre></td></tr></table></figure>
+
+<p><strong>③ 云函数统一入口（cloudfunctions&#x2F;photos&#x2F;index.js）：</strong></p>
+<p>将多个云函数收敛成一个入口，用 <code>event.type</code> 分发，部署和管理都更简单：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">const</span> getOpenid = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;./getOpenid/index&quot;</span>);<br><span class="hljs-keyword">const</span> addPhoto = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;./addPhoto/index&quot;</span>);<br><span class="hljs-keyword">const</span> delPhoto = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;./delPhoto/index&quot;</span>);<br><span class="hljs-keyword">const</span> getStats = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;./getStats/index&quot;</span>);<br><span class="hljs-keyword">const</span> incView = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;./incView/index&quot;</span>);<br><br><span class="hljs-built_in">exports</span>.<span class="hljs-property">main</span> = <span class="hljs-title function_">async</span> (event, context) =&gt; &#123;<br>  <span class="hljs-keyword">const</span> type = <span class="hljs-title class_">String</span>(event.<span class="hljs-property">type</span> || <span class="hljs-string">&quot;&quot;</span>).<span class="hljs-title function_">trim</span>();<br>  <span class="hljs-keyword">switch</span> (type) &#123;<br>    <span class="hljs-keyword">case</span> <span class="hljs-string">&quot;getOpenid&quot;</span>: <span class="hljs-keyword">return</span> <span class="hljs-keyword">await</span> getOpenid.<span class="hljs-title function_">main</span>(event, context);<br>    <span class="hljs-keyword">case</span> <span class="hljs-string">&quot;addPhoto&quot;</span>:  <span class="hljs-keyword">return</span> <span class="hljs-keyword">await</span> addPhoto.<span class="hljs-title function_">main</span>(event, context);<br>    <span class="hljs-keyword">case</span> <span class="hljs-string">&quot;delPhoto&quot;</span>:  <span class="hljs-keyword">return</span> <span class="hljs-keyword">await</span> delPhoto.<span class="hljs-title function_">main</span>(event, context);<br>    <span class="hljs-keyword">case</span> <span class="hljs-string">&quot;getStats&quot;</span>:  <span class="hljs-keyword">return</span> <span class="hljs-keyword">await</span> getStats.<span class="hljs-title function_">main</span>(event, context);<br>    <span class="hljs-keyword">case</span> <span class="hljs-string">&quot;incView&quot;</span>:   <span class="hljs-keyword">return</span> <span class="hljs-keyword">await</span> incView.<span class="hljs-title function_">main</span>(event, context);<br>    <span class="hljs-attr">default</span>: <span class="hljs-keyword">return</span> &#123; <span class="hljs-attr">code</span>: -<span class="hljs-number">1</span>, <span class="hljs-attr">msg</span>: <span class="hljs-string">&quot;未知操作：&quot;</span> + type &#125;;<br>  &#125;<br>&#125;;<br></code></pre></td></tr></table></figure>
+
+<p>新增图片走云函数写库而不是客户端直连 <code>db.add()</code>，原因：① 时间戳由服务端生成，避免客户端时钟偏差导致排序错乱；② <code>_openid</code> 由云函数可信上下文写入，客户端伪造不了；③ 采用字段白名单，只接受约定的几个字段：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-comment">// cloudfunctions/photos/addPhoto/index.js（节选）</span><br><span class="hljs-keyword">const</span> <span class="hljs-variable constant_">OPENID</span> = cloud.<span class="hljs-title function_">getWXContext</span>().<span class="hljs-property">OPENID</span>;<br><span class="hljs-keyword">const</span> data = &#123;<br>  <span class="hljs-attr">photoUrl</span>: <span class="hljs-title function_">limit</span>(fileID, <span class="hljs-number">500</span>),<br>  <span class="hljs-attr">desc</span>: <span class="hljs-title function_">limit</span>(event.<span class="hljs-property">desc</span>, <span class="hljs-number">200</span>),<br>  <span class="hljs-attr">uid</span>: <span class="hljs-title function_">limit</span>(event.<span class="hljs-property">uid</span>, <span class="hljs-number">64</span>),          <span class="hljs-comment">// 当前账号 ID（见 user.js）</span><br>  <span class="hljs-attr">avatarUrl</span>: <span class="hljs-title function_">limit</span>(event.<span class="hljs-property">avatarUrl</span>, <span class="hljs-number">500</span>),<br>  <span class="hljs-attr">nickName</span>: <span class="hljs-title function_">limit</span>(event.<span class="hljs-property">nickName</span>, <span class="hljs-number">50</span>),<br>  <span class="hljs-attr">province</span>: <span class="hljs-title function_">limit</span>(event.<span class="hljs-property">province</span>, <span class="hljs-number">50</span>),<br>  <span class="hljs-attr">_openid</span>: <span class="hljs-variable constant_">OPENID</span>,<br>  <span class="hljs-attr">createTime</span>: <span class="hljs-title class_">Date</span>.<span class="hljs-title function_">now</span>(),             <span class="hljs-comment">// 服务端时间戳</span><br>  <span class="hljs-attr">viewCount</span>: <span class="hljs-number">0</span><br>&#125;;<br><span class="hljs-keyword">await</span> db.<span class="hljs-title function_">collection</span>(<span class="hljs-string">&quot;photos&quot;</span>).<span class="hljs-title function_">add</span>(&#123; <span class="hljs-attr">data</span>: data &#125;);<br></code></pre></td></tr></table></figure>
+
+<p><strong>④ services 三层架构（页面 → api.js → cloud.js）：</strong></p>
+<p>页面**永不直接调用 <code>wx.cloud</code>**，统一走 <code>services/api.js</code> 数据出口，由它统一错误兜底；<code>services/cloud.js</code> 是全项目唯一出现 <code>wx.cloud.*</code> 的文件，方便未来整体更换数据源：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-comment">// services/api.js（节选）—— 统一错误处理：失败 toast 并返回安全兜底值</span><br><span class="hljs-keyword">function</span> <span class="hljs-title function_">guard</span>(<span class="hljs-params">promise, fallback</span>) &#123;<br>  <span class="hljs-keyword">return</span> promise.<span class="hljs-title function_">catch</span>(<span class="hljs-keyword">function</span> (<span class="hljs-params">e</span>) &#123;<br>    <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">error</span>(<span class="hljs-string">&quot;[api]&quot;</span>, e);<br>    util.<span class="hljs-title function_">toast</span>((e &amp;&amp; e.<span class="hljs-property">message</span>) || <span class="hljs-string">&quot;操作失败，请重试&quot;</span>);<br>    <span class="hljs-keyword">return</span> fallback;<br>  &#125;);<br>&#125;<br><span class="hljs-variable language_">module</span>.<span class="hljs-property">exports</span> = &#123;<br>  <span class="hljs-attr">listPhotos</span>:  <span class="hljs-function">(<span class="hljs-params">opt</span>) =&gt;</span> <span class="hljs-title function_">guard</span>(cloud.<span class="hljs-title function_">listPhotos</span>(opt), &#123; <span class="hljs-attr">list</span>: [], <span class="hljs-attr">hasMore</span>: <span class="hljs-literal">false</span> &#125;),<br>  <span class="hljs-attr">getPhoto</span>:    <span class="hljs-function">(<span class="hljs-params">id</span>)  =&gt;</span> <span class="hljs-title function_">guard</span>(cloud.<span class="hljs-title function_">getPhoto</span>(id), <span class="hljs-literal">null</span>),<br>  <span class="hljs-attr">getStats</span>:    <span class="hljs-function">(<span class="hljs-params">uid</span>) =&gt;</span> <span class="hljs-title function_">guard</span>(cloud.<span class="hljs-title function_">getStats</span>(uid || <span class="hljs-string">&quot;&quot;</span>), <span class="hljs-literal">null</span>),<br>  <span class="hljs-attr">addPhoto</span>:    <span class="hljs-function">(<span class="hljs-params">filePath, desc</span>) =&gt;</span> <span class="hljs-title function_">guard</span>(cloud.<span class="hljs-title function_">addPhoto</span>(filePath, desc), <span class="hljs-literal">null</span>),<br>  <span class="hljs-attr">removePhoto</span>: <span class="hljs-function">(<span class="hljs-params">id, uid</span>) =&gt;</span> <span class="hljs-title function_">guard</span>(cloud.<span class="hljs-title function_">removePhoto</span>(id, uid), <span class="hljs-literal">false</span>),<br>  ...<br>&#125;;<br></code></pre></td></tr></table></figure>
+
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-comment">// services/cloud.js（节选）—— 列表分页：支持按 uid 查「我的」，不传查全社区</span><br><span class="hljs-keyword">async</span> <span class="hljs-keyword">function</span> <span class="hljs-title function_">listPhotos</span>(<span class="hljs-params">opt</span>) &#123;<br>  opt = opt || &#123;&#125;;<br>  <span class="hljs-keyword">const</span> uid = opt.<span class="hljs-property">uid</span>, page = opt.<span class="hljs-property">page</span> || <span class="hljs-number">0</span>;<br>  <span class="hljs-keyword">const</span> pageSize = opt.<span class="hljs-property">pageSize</span> || config.<span class="hljs-property">PAGE_SIZE</span>;<br>  <span class="hljs-keyword">let</span> query = <span class="hljs-title function_">coll</span>();<br>  <span class="hljs-keyword">if</span> (uid) query = query.<span class="hljs-title function_">where</span>(&#123; <span class="hljs-attr">uid</span>: uid &#125;);<br>  <span class="hljs-keyword">const</span> res = <span class="hljs-keyword">await</span> query.<span class="hljs-title function_">orderBy</span>(<span class="hljs-string">&quot;createTime&quot;</span>, <span class="hljs-string">&quot;desc&quot;</span>)<br>    .<span class="hljs-title function_">skip</span>(page * pageSize).<span class="hljs-title function_">limit</span>(pageSize).<span class="hljs-title function_">get</span>();<br>  <span class="hljs-keyword">return</span> &#123; <span class="hljs-attr">list</span>: res.<span class="hljs-property">data</span> || [], <span class="hljs-attr">hasMore</span>: res.<span class="hljs-property">data</span>.<span class="hljs-property">length</span> === pageSize &#125;;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p><strong>⑤ 登录与账号体系（services&#x2F;user.js）——「换头像昵称重新登录 &#x3D; 新账号」：</strong></p>
+<p>微信自 2022 年起废弃 <code>wx.getUserInfo</code>，教材示例中基于它的实现已不可用。本项目改用官方的<strong>头像昵称填写能力</strong>：<code>&lt;button open-type=&quot;chooseAvatar&quot;&gt;</code> + <code>&lt;input type=&quot;nickname&quot;&gt;</code>。为了让「只能删自己的图」在单微信号上也能演示，每次登录生成一个新的 <strong>uid（账号ID）</strong>，图片归属与删除权限都按 uid 判定：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">genUid</span>(<span class="hljs-params"></span>) &#123;<br>  <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;u&quot;</span> + <span class="hljs-title class_">Date</span>.<span class="hljs-title function_">now</span>().<span class="hljs-title function_">toString</span>(<span class="hljs-number">36</span>) + <span class="hljs-title class_">Math</span>.<span class="hljs-title function_">random</span>().<span class="hljs-title function_">toString</span>(<span class="hljs-number">36</span>).<span class="hljs-title function_">slice</span>(<span class="hljs-number">2</span>, <span class="hljs-number">8</span>);<br>&#125;<br><span class="hljs-keyword">function</span> <span class="hljs-title function_">isLogin</span>(<span class="hljs-params"></span>) &#123;<br>  <span class="hljs-keyword">return</span> !!(_profile &amp;&amp; _profile.<span class="hljs-property">openid</span> &amp;&amp; _profile.<span class="hljs-property">uid</span>); <span class="hljs-comment">// 缺 uid 的旧缓存强制重登</span><br>&#125;<br><span class="hljs-keyword">function</span> <span class="hljs-title function_">login</span>(<span class="hljs-params">form</span>) &#123; <span class="hljs-comment">/* 取 openid → 临时头像传云存储换永久 fileID → 落盘 */</span><br>  ...<br>  <span class="hljs-keyword">function</span> <span class="hljs-title function_">finish</span>(<span class="hljs-params">finalAvatar, openid</span>) &#123;<br>    <span class="hljs-keyword">const</span> profile = &#123;<br>      <span class="hljs-attr">uid</span>: <span class="hljs-title function_">genUid</span>(),          <span class="hljs-comment">// 本次登录 = 新账号</span><br>      <span class="hljs-attr">openid</span>: openid,<br>      <span class="hljs-attr">nickName</span>: nick,<br>      <span class="hljs-attr">avatarUrl</span>: finalAvatar,<br>      <span class="hljs-attr">loginTime</span>: <span class="hljs-title class_">Date</span>.<span class="hljs-title function_">now</span>(),<br>    &#125;;<br>    _profile = profile;<br>    <span class="hljs-title function_">writeStore</span>(profile);      <span class="hljs-comment">// 同步本地缓存 + globalData</span><br>    <span class="hljs-title function_">syncGlobal</span>();<br>    <span class="hljs-keyword">return</span> profile;<br>  &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<blockquote>
+<p>踩坑说明：<code>chooseAvatar</code> 返回的是本地临时路径（<code>wxfile://…</code>），小程序一退出就失效，直接存库下次就白图。因此登录时会把头像上传到云存储换成 <code>cloud://</code> 永久 fileID 再持久化。</p>
+</blockquote>
+<p><strong>⑥ 删除权限双重校验（前端显隐 + 云函数拦截）：</strong></p>
+<ul>
+<li>前端：首页卡片 <code>show-delete=&quot;&#123;&#123;item.uid === myUid&#125;&#125;&quot;</code>，只有当前账号的图片才渲染「删除」按钮；</li>
+<li>云函数 <code>delPhoto</code> 服务端再校验一次，即使伪造请求也删不掉别人的图：</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-comment">// cloudfunctions/photos/delPhoto/index.js（节选）</span><br><span class="hljs-keyword">if</span> (photo.<span class="hljs-property">_openid</span> !== <span class="hljs-variable constant_">OPENID</span>) &#123;                       <span class="hljs-comment">// ① 同一微信</span><br>  <span class="hljs-keyword">return</span> &#123; <span class="hljs-attr">code</span>: <span class="hljs-number">403</span>, <span class="hljs-attr">msg</span>: <span class="hljs-string">&quot;只能删除自己的图片&quot;</span> &#125;;<br>&#125;<br><span class="hljs-keyword">if</span> (event.<span class="hljs-property">uid</span> &amp;&amp; photo.<span class="hljs-property">uid</span> &amp;&amp; photo.<span class="hljs-property">uid</span> !== event.<span class="hljs-property">uid</span>) &#123; <span class="hljs-comment">// ② 同一账号</span><br>  <span class="hljs-keyword">return</span> &#123; <span class="hljs-attr">code</span>: <span class="hljs-number">403</span>, <span class="hljs-attr">msg</span>: <span class="hljs-string">&quot;只能删除当前账号上传的图片&quot;</span> &#125;;<br>&#125;<br><span class="hljs-keyword">await</span> db.<span class="hljs-title function_">collection</span>(<span class="hljs-variable constant_">COLL</span>).<span class="hljs-title function_">doc</span>(id).<span class="hljs-title function_">remove</span>();            <span class="hljs-comment">// 删记录</span><br><span class="hljs-keyword">await</span> cloud.<span class="hljs-title function_">deleteFile</span>(&#123; <span class="hljs-attr">fileList</span>: [photo.<span class="hljs-property">photoUrl</span>] &#125;); <span class="hljs-comment">// 连带删云存储</span><br></code></pre></td></tr></table></figure>
+
+<p><strong>⑦ 首页（pages&#x2F;index）—— QQ空间风格动态流：</strong></p>
+<p>顶部为「发说说」入口（头像 + “分享新鲜事…” + 📷），下方是说说卡片列表；点输入框&#x2F;相机先确认登录态再跳转上传页：</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;publish-bar&quot;</span>&gt;</span><br>  <span class="hljs-tag">&lt;<span class="hljs-name">image</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;pb-avatar&quot;</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;&#123;&#123;avatarUrl&#125;&#125;&quot;</span> <span class="hljs-attr">mode</span>=<span class="hljs-string">&quot;aspectFill&quot;</span> <span class="hljs-attr">bindtap</span>=<span class="hljs-string">&quot;onAvatarTap&quot;</span> /&gt;</span><br>  <span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;pb-input&quot;</span> <span class="hljs-attr">bindtap</span>=<span class="hljs-string">&quot;onPublishTap&quot;</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">text</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;pb-placeholder&quot;</span>&gt;</span>分享新鲜事...<span class="hljs-tag">&lt;/<span class="hljs-name">text</span>&gt;</span><br>  <span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span><br>  <span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;pb-camera&quot;</span> <span class="hljs-attr">bindtap</span>=<span class="hljs-string">&quot;onPublishTap&quot;</span>&gt;</span>📷<span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span><br><br><span class="hljs-tag">&lt;<span class="hljs-name">block</span> <span class="hljs-attr">wx:else</span>&gt;</span><br>  <span class="hljs-tag">&lt;<span class="hljs-name">photo-card</span></span><br><span class="hljs-tag">    <span class="hljs-attr">wx:for</span>=<span class="hljs-string">&quot;&#123;&#123;photoList&#125;&#125;&quot;</span> <span class="hljs-attr">wx:key</span>=<span class="hljs-string">&quot;_id&quot;</span></span><br><span class="hljs-tag">    <span class="hljs-attr">photo</span>=<span class="hljs-string">&quot;&#123;&#123;item&#125;&#125;&quot;</span></span><br><span class="hljs-tag">    <span class="hljs-attr">show-delete</span>=<span class="hljs-string">&quot;&#123;&#123;item.uid === myUid&#125;&#125;&quot;</span></span><br><span class="hljs-tag">    <span class="hljs-attr">bind:imagetap</span>=<span class="hljs-string">&quot;onImageTap&quot;</span></span><br><span class="hljs-tag">    <span class="hljs-attr">bind:delete</span>=<span class="hljs-string">&quot;onDelete&quot;</span></span><br><span class="hljs-tag">  /&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">block</span>&gt;</span><br></code></pre></td></tr></table></figure>
+
+<p>图片说说卡片抽成自定义组件 <code>photo-card</code>，首页与「我的」复用：作者行（头像、昵称、时间·地点）→ 正文文字在上、图片在下 → 底部「赞&#x2F;评论&#x2F;转发」操作栏：</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><code class="hljs xml"><span class="hljs-comment">&lt;!-- components/photo-card/photo-card.wxml --&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;card&quot;</span> <span class="hljs-attr">wx:if</span>=<span class="hljs-string">&quot;&#123;&#123;photo&#125;&#125;&quot;</span>&gt;</span><br>  <span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;card-head&quot;</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">image</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;avatar&quot;</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;&#123;&#123;photo.avatarUrl || defaultAvatar&#125;&#125;&quot;</span> <span class="hljs-attr">mode</span>=<span class="hljs-string">&quot;aspectFill&quot;</span> <span class="hljs-attr">bindtap</span>=<span class="hljs-string">&quot;onAvatarTap&quot;</span> /&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;info&quot;</span>&gt;</span><br>      <span class="hljs-tag">&lt;<span class="hljs-name">text</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;nickname&quot;</span>&gt;</span>&#123;&#123;photo.nickName || defaultNickname&#125;&#125;<span class="hljs-tag">&lt;/<span class="hljs-name">text</span>&gt;</span><br>      <span class="hljs-tag">&lt;<span class="hljs-name">text</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;meta&quot;</span>&gt;</span>&#123;&#123;locationText&#125;&#125; · &#123;&#123;timeText&#125;&#125;<span class="hljs-tag">&lt;/<span class="hljs-name">text</span>&gt;</span><br>    <span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">wx:if</span>=<span class="hljs-string">&quot;&#123;&#123;showDelete&#125;&#125;&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;del-btn&quot;</span> <span class="hljs-attr">catchtap</span>=<span class="hljs-string">&quot;onDeleteTap&quot;</span>&gt;</span>删除<span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span><br>  <span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span><br>  <span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;card-body&quot;</span> <span class="hljs-attr">bindtap</span>=<span class="hljs-string">&quot;onImageTap&quot;</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">wx:if</span>=<span class="hljs-string">&quot;&#123;&#123;photo.desc&#125;&#125;&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;desc&quot;</span>&gt;</span>&#123;&#123;photo.desc&#125;&#125;<span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">image</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;pic&quot;</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;&#123;&#123;photo.photoUrl&#125;&#125;&quot;</span> <span class="hljs-attr">mode</span>=<span class="hljs-string">&quot;widthFix&quot;</span> <span class="hljs-attr">lazy-load</span>=<span class="hljs-string">&quot;&#123;&#123;true&#125;&#125;&quot;</span> /&gt;</span><br>  <span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span><br>  <span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;card-actions&quot;</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;act&quot;</span> <span class="hljs-attr">bindtap</span>=<span class="hljs-string">&quot;onActionTap&quot;</span>&gt;</span>赞<span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;act&quot;</span> <span class="hljs-attr">bindtap</span>=<span class="hljs-string">&quot;onActionTap&quot;</span>&gt;</span>评论<span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;act&quot;</span> <span class="hljs-attr">bindtap</span>=<span class="hljs-string">&quot;onActionTap&quot;</span>&gt;</span>转发<span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span><br>  <span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span><br></code></pre></td></tr></table></figure>
+
+<p><strong>⑧ 上传图片页（pages&#x2F;add）：</strong></p>
+<p>支持最多 9 张多选、九宫格预览与删除已选、上传前压缩、串行逐张上传、展示我的历史上传：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-comment">// pages/add/add.js（节选）</span><br><span class="hljs-title function_">chooseImage</span>(<span class="hljs-params"></span>) &#123;<br>  <span class="hljs-keyword">const</span> remain = <span class="hljs-variable language_">this</span>.<span class="hljs-property">data</span>.<span class="hljs-property">maxUpload</span> - <span class="hljs-variable language_">this</span>.<span class="hljs-property">data</span>.<span class="hljs-property">files</span>.<span class="hljs-property">length</span>;<br>  wx.<span class="hljs-title function_">chooseImage</span>(&#123; <span class="hljs-attr">count</span>: remain, <span class="hljs-attr">sizeType</span>: [<span class="hljs-string">&quot;compressed&quot;</span>],<br>    <span class="hljs-attr">success</span>: <span class="hljs-function"><span class="hljs-params">res</span> =&gt;</span> <span class="hljs-variable language_">this</span>.<span class="hljs-title function_">setData</span>(&#123; <span class="hljs-attr">files</span>: <span class="hljs-variable language_">this</span>.<span class="hljs-property">data</span>.<span class="hljs-property">files</span>.<span class="hljs-title function_">concat</span>(res.<span class="hljs-property">tempFilePaths</span>) &#125;) &#125;);<br>&#125;<br><br><span class="hljs-title function_">upload</span>(<span class="hljs-params"></span>) &#123;           <span class="hljs-comment">// 逐张串行上传，压缩在 cloud.js addPhoto 内统一完成</span><br>  ...<br>  api.<span class="hljs-title function_">addPhoto</span>(files[i], desc).<span class="hljs-title function_">then</span>(<span class="hljs-function"><span class="hljs-params">record</span> =&gt;</span> &#123; record ? done++ : fail++; <span class="hljs-title function_">next</span>(i + <span class="hljs-number">1</span>); &#125;);<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p><strong>⑨ 图片展示页（pages&#x2F;detail）：</strong></p>
+<p>根据 URL 参数 <code>id</code> 查单张记录，支持全屏预览、下载到系统相册（含相册权限被拒后的设置引导）、<code>open-type=&quot;share&quot;</code> 分享、以及仅当前账号可见的删除：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs javascript">wx.<span class="hljs-property">cloud</span>.<span class="hljs-title function_">downloadFile</span>(&#123; <span class="hljs-attr">fileID</span>: p.<span class="hljs-property">photoUrl</span> &#125;)          <span class="hljs-comment">// 云存储下载</span><br>  .<span class="hljs-title function_">then</span>(<span class="hljs-function"><span class="hljs-params">r</span> =&gt;</span> wx.<span class="hljs-title function_">saveImageToPhotosAlbum</span>(&#123; <span class="hljs-attr">filePath</span>: r.<span class="hljs-property">tempFilePath</span> &#125;)) <span class="hljs-comment">// 存相册</span><br><span class="hljs-title function_">onShareAppMessage</span>(<span class="hljs-params"></span>) &#123; <span class="hljs-keyword">return</span> &#123; <span class="hljs-attr">title</span>: <span class="hljs-string">&quot;...&quot;</span>, <span class="hljs-attr">path</span>: <span class="hljs-string">&quot;/pages/detail/detail?id=&quot;</span> + id,<br>                               <span class="hljs-attr">imageUrl</span>: p.<span class="hljs-property">photoUrl</span> &#125;; &#125; <span class="hljs-comment">// 分享卡片带图</span><br></code></pre></td></tr></table></figure>
+
+<h4 id="1-3-3-功能说明"><a href="#1-3-3-功能说明" class="headerlink" title="1.3.3 功能说明"></a>1.3.3 功能说明</h4><table>
+<thead>
+<tr>
+<th>功能</th>
+<th>实现方式</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>云数据库</td>
+<td>控制台创建 <code>photos</code> 集合，权限设为「所有用户可读，仅创建者及管理员可写」</td>
+</tr>
+<tr>
+<td>图片上传</td>
+<td><code>wx.chooseImage</code> 选图 → <code>wx.cloud.uploadFile</code> 传云存储（路径 <code>photos/&#123;openid&#125;/&#123;ts&#125;_&#123;rand&#125;.jpg</code>）→ 云函数 <code>addPhoto</code> 写库</td>
+</tr>
+<tr>
+<td>图片列表</td>
+<td><code>orderBy(createTime, desc)</code> 倒序分页读取，最新图片在最上</td>
+</tr>
+<tr>
+<td>多图上传</td>
+<td>最多 9 张多选，九宫格预览、可删已选，达到上限自动隐藏「+」</td>
+</tr>
+<tr>
+<td>上传压缩</td>
+<td><code>wx.compressImage</code> quality&#x3D;80，压缩失败自动退回原图，不阻断流程</td>
+</tr>
+<tr>
+<td>分页&#x2F;触底加载</td>
+<td>每页 20 条（云数据库 get 上限），<code>onReachBottom</code> 追加下一页</td>
+</tr>
+<tr>
+<td>下拉刷新</td>
+<td><code>enablePullDownRefresh</code> + <code>onPullDownRefresh</code></td>
+</tr>
+<tr>
+<td>浏览统计</td>
+<td>详情页打开调 <code>incView</code> 云函数 <code>_.inc(1)</code> 自增；首页&#x2F;我的用 <code>getStats</code> 聚合展示</td>
+</tr>
+<tr>
+<td>删除（越权防护）</td>
+<td>前端 <code>item.uid === myUid</code> 才显示删除；云函数 <code>delPhoto</code> 双重校验 <code>_openid</code> 与 <code>uid</code></td>
+</tr>
+<tr>
+<td>账号体系</td>
+<td>每次登录生成新 uid，<code>换头像昵称重新登录 = 新账号</code>，新账号不能删旧账号的图</td>
+</tr>
+<tr>
+<td>登录</td>
+<td>官方「头像昵称填写能力」<code>chooseAvatar</code> + <code>type=&quot;nickname&quot;</code>，头像自动转云存储永久 fileID</td>
+</tr>
+<tr>
+<td>首页导航</td>
+<td>tabBar 两标签（首页 &#x2F; 我的），顶部「分享新鲜事」入口替代悬浮按钮</td>
+</tr>
+<tr>
+<td>图片展示</td>
+<td>大图、全屏预览 <code>wx.previewImage</code>、下载到相册、<code>share</code> 分享带封面图</td>
+</tr>
+<tr>
+<td>我的主页</td>
+<td>按当前账号 uid 拉取我的说说，未登录显示「去登录」引导</td>
+</tr>
+</tbody></table>
+<h4 id="1-3-4-运行效果"><a href="#1-3-4-运行效果" class="headerlink" title="1.3.4 运行效果"></a>1.3.4 运行效果</h4><p><img src="/img/lab6-home.png" srcset="/img/loading.gif" lazyload alt="首页——QQ空间风格说说流与发说说入口"></p>
+<p><img src="/img/lab6-login.png" srcset="/img/loading.gif" lazyload alt="登录页——头像昵称填写"></p>
+<p><img src="/img/lab6-add.png" srcset="/img/loading.gif" lazyload alt="上传图片页——多选九宫格"></p>
+<p><img src="/img/lab6-mine.png" srcset="/img/loading.gif" lazyload alt="我的页——未登录引导 / 我的说说"></p>
+<h3 id="1-4-关键技术点"><a href="#1-4-关键技术点" class="headerlink" title="1.4 关键技术点"></a>1.4 关键技术点</h3><ol>
+<li><p><strong>云开发三件套的配合</strong>：云数据库（记录结构化信息）、云存储（存放图片二进制，返回 fileID 直接作为数据库字段）、云函数（取 openid、服务端写库、删除清理）。图片地址用 <code>cloud://</code> fileID 存储，前端 <code>&lt;image&gt;</code> 可直接渲染，无需额外鉴权。</p>
+</li>
+<li><p><strong>写操作走云函数、读操作直连数据库</strong>：读列表&#x2F;详情直接 <code>collection.get()</code>（受权限约束、无冷启动）；写（新增&#x2F;删除）走云函数以获得服务端时间戳、可信 <code>_openid</code>、字段白名单与文件清理能力。</p>
+</li>
+<li><p><strong>云函数单入口路由</strong>：一个 <code>photos</code> 云函数用 <code>switch(event.type)</code> 分发到 <code>getOpenid/addPhoto/delPhoto/getStats/incView</code> 子模块，只部署一次，避免”一个功能一个函数”的部署与冷启动开销。</p>
+</li>
+<li><p><strong>越权删除防护</strong>：删除是危险操作，只靠前端隐藏按钮不够。云函数 <code>delPhoto</code> 在服务端用管理员权限读回记录后校验 <code>_openid</code>（同微信）与 <code>uid</code>（同账号）双重归属，并把云存储文件一并删除，避免留下”孤儿文件”。</p>
+</li>
+<li><p><strong>uid 账号体系（扩展）</strong>：单微信号下用 <code>openid</code> 无法区分”换头像昵称登录的新账号”，因此每次登录生成 uid 并写入图片记录，实现”只能删当前账号自己的图”的演示与校验。</p>
+</li>
+<li><p><strong>分层架构（扩展）</strong>：页面 → <code>services/api.js</code>（统一出口 + 错误兜底）→ <code>services/cloud.js</code>（唯一 <code>wx.cloud</code> 调用点），改数据源或加缓存只动一层，页面零改动。</p>
+</li>
+<li><p><strong>头像昵称填写能力（2022 新规）</strong>：<code>wx.getUserInfo/getUserProfile</code> 均已废弃&#x2F;退化，用 <code>&lt;button open-type=&quot;chooseAvatar&quot;&gt;</code> + <code>&lt;input type=&quot;nickname&quot;&gt;</code>；拿到的是本地临时路径，必须上传云存储换成永久 fileID。</p>
+</li>
+<li><p><strong>自定义组件复用</strong>：说说卡片抽成 <code>photo-card</code> 组件（含 observers 预计算时间&#x2F;地点文案），首页与我的页面共用，改样式只改一处。</p>
+</li>
+<li><p><strong>setData 与生命周期</strong>：上传成功用 <code>app.globalData.needRefresh</code> 标记，首页&#x2F;我的 <code>onShow</code> 时刷新列表；登录态统一由 <code>user.js</code> 同步到 globalData，避免各页判断口径不一致。</p>
+</li>
+<li><p><strong>QQ空间风格 UI（扩展）</strong>：去掉悬浮按钮，改为顶部”分享新鲜事…”发说说入口 + 白底通栏说说卡片（文字在上、图片在下、底部赞&#x2F;评论&#x2F;转发操作栏），贴合经典社交信息流排版。</p>
+</li>
+</ol>
+<h2 id="二、问题总结与体会"><a href="#二、问题总结与体会" class="headerlink" title="二、问题总结与体会"></a>二、问题总结与体会</h2><h3 id="2-1-遇到的问题及解决方案"><a href="#2-1-遇到的问题及解决方案" class="headerlink" title="2.1 遇到的问题及解决方案"></a>2.1 遇到的问题及解决方案</h3><p><strong>问题1：首页与「我的」tabBar 图标不显示</strong></p>
+<ul>
+<li><strong>现象</strong>：底部导航栏只显示文字，图标空白；切换标签时也看不到选中态图标</li>
+<li><strong>原因</strong>：项目目录路径中包含中文字符（<code>…\移动软件开发\实验\实验六</code>），微信开发者工具对非 ASCII 路径支持不佳，导致本地图片资源加载失败；此外旧版描边图标线条过细、辨识度低</li>
+<li><strong>解决</strong>：① 将整个工程换到纯英文路径下运行，清空开发者工具缓存（「清缓存 → 全部清除 → 重新编译」）；② 用 <code>gen_tab_icons.py</code> 重新生成<strong>实心填充</strong>图标，未选中灰、选中蓝，保证任何情况下都清晰可见</li>
+</ul>
+<p><strong>问题2：「我的」页点击后一片空白、没有登录选项</strong></p>
+<ul>
+<li><strong>现象</strong>：点击底部「我的」标签进入个人中心，页面完全空白</li>
+<li><strong>原因</strong>：排查发现两个真实代码缺陷——<code>services/cloud.js</code> 中导出了 <code>getStats/incView</code> 却没有实现函数体，调用时同步抛出 <code>TypeError</code>，中断了后续渲染逻辑；且云函数 <code>photos</code> 的路由 <code>switch</code> 里漏写了 <code>getStats/incView</code> 两个分支，返回”未知操作”</li>
+<li><strong>解决</strong>：① 在 <code>cloud.js</code> 补齐 <code>getStats/incView</code> 实现；② 云函数 <code>index.js</code> 的 <code>switch</code> 补上两个 case 并重新部署；③ 把 <code>refresh()</code> 改为<strong>先渲染安全默认数据（未登录引导）</strong>再加载数据，加载逐项 <code>try/catch</code>，从根本上杜绝白屏</li>
+</ul>
+<p><strong>问题3：按钮文字 &#x2F; 头像不居中</strong></p>
+<ul>
+<li><strong>现象</strong>：登录页「进入社区」按钮文字偏上，「更换头像」的头像和文字看起来偏移</li>
+<li><strong>原因</strong>：微信 <code>&lt;button&gt;</code> 自带默认内边距和行高，页面只重置了背景色，没有清掉默认 <code>padding</code>，导致用 <code>height + line-height</code> 做垂直居中时文字被默认内边距挤偏</li>
+<li><strong>解决</strong>：在全局 <code>app.wxss</code> 中统一重置 <code>button &#123; padding: 0; text-align: center; box-sizing: border-box; &#125;</code>；头像按钮改为 <code>display:flex + align-items/justify-content:center</code> 并显式 <code>margin-left/right:auto</code> 水平居中</li>
+</ul>
+<p><strong>问题4：换头像昵称重新登录后，还能删除之前上传的图片</strong></p>
+<ul>
+<li><strong>现象</strong>：用 A 头像昵称登录上传若干图片，再回登录页换成 B 头像昵称登录，B 仍然能看到并删除 A 的图片</li>
+<li><strong>原因</strong>：删除权限只按微信 <code>openid</code> 判定。同一微信号的 <code>openid</code> 恒定不变，换多少次头像昵称都视为同一人，因此新”账号”能删旧账号的图</li>
+<li><strong>解决</strong>：引入<strong>每次登录生成一个 uid（账号ID）</strong>的账号体系：图片记录写入 <code>uid</code>，「我的」页按 uid 拉取，删除按钮 <code>item.uid === myUid</code> 才显示；云函数 <code>delPhoto</code> 再加一道 <code>uid</code> 匹配校验。A 账号的图片对 B 账号（新 uid）既看不到删除按钮，服务端也会直接拦截（返回”只能删除当前账号上传的图片”）</li>
+</ul>
+<p><strong>问题5：首页悬浮「+」按钮太突兀，布局不像 QQ空间</strong></p>
+<ul>
+<li><strong>现象</strong>：右下角圆形悬浮按钮遮挡内容，整体排版与 QQ空间”说说”动态流差别大</li>
+<li><strong>解决</strong>：删除悬浮按钮，参考 QQ空间首页改为顶部「头像 + 分享新鲜事… + 📷」发说说入口；说说卡片改为白底通栏、昵称蓝色、正文在上图片在下、底部”赞&#x2F;评论&#x2F;转发”操作栏；发图入口与卡片事件统一走登录态校验</li>
+</ul>
+<p><strong>问题6：教材示例代码基于已废弃的 getUserInfo</strong></p>
+<ul>
+<li><strong>现象</strong>：教材&#x2F;旧教程用 <code>wx.getUserInfo</code> 拿头像昵称，真机和模拟器上只返回灰色默认头像与”微信用户”，拿不到真实资料</li>
+<li><strong>解决</strong>：改用 2022 年后官方的头像昵称填写能力（<code>chooseAvatar</code> + <code>nickname</code> 输入框）；由于返回的是本地临时路径，登录时先上传云存储换 <code>cloud://</code> 永久 fileID，避免下次启动图片失效</li>
+</ul>
+<p><strong>问题7：上传后返回首页看不到新图片</strong></p>
+<ul>
+<li><strong>现象</strong>：上传成功提示后回到首页，列表还是旧的</li>
+<li><strong>原因</strong>：列表只在页面 <code>onLoad</code> 读取一次，上传页返回时首页并不会自动重新查询</li>
+<li><strong>解决</strong>：上传成功后置全局标记 <code>app.globalData.needRefresh = true</code>，首页&#x2F;我的页在 <code>onShow</code> 检测到该标记就重新 <code>loadList()</code> 刷新</li>
+</ul>
+<h3 id="2-2-收获与体会"><a href="#2-2-收获与体会" class="headerlink" title="2.2 收获与体会"></a>2.2 收获与体会</h3><ol>
+<li><p><strong>建立了”前端页面 → api 出口层 → 云能力层”的分层意识</strong>：以前习惯在页面里直接 <code>wx.cloud.database()</code> 到处查询，这次把数据访问收敛到 <code>services/</code> 两层，页面只调语义化的 <code>api.listPhotos()</code> 等接口，错误处理统一兜底，维护起来非常清爽。</p>
+</li>
+<li><p><strong>真正理解了云函数”可信”的价值</strong>：客户端直连数据库时 <code>_openid</code> 由 SDK 自动写入、权限受集合限制；而云函数用管理员权限执行，能拿到可信上下文并做服务端校验。把”新增&#x2F;删除”这类写操作交给云函数（服务端时间戳、字段白名单、归属校验、连带清理云存储），安全性比”客户端直写”高一个档次。</p>
+</li>
+<li><p>**学会从”渲染异常”反查”数据层 bug”**：页面上看似是”空白&#x2F;不显示”，深层原因往往是数据层函数缺失、路由漏配这类低级错误，配合控制台报错与逐层 <code>try/catch</code> 很快能定位。</p>
+</li>
+<li><p><strong>理解”身份”与”账号”的区别</strong>：<code>openid</code> 是微信维度的固定身份；而社交产品里的”账号”可以有自己的一层标识（本项目用 uid 演示）。”只能删自己的”这类权限，必须由<strong>前端显隐 + 服务端校验</strong>双层保证，前端只是体验、服务端才是底线。</p>
+</li>
+<li><p>**接触了 WXSS 的”坑”**：<code>&lt;button&gt;</code> 默认 padding&#x2F;line-height 会导致文字偏移、自定义组件不继承 <code>app.wxss</code> 样式、<code>cover-view</code>&#x2F;<code>canvas</code> 等原生组件层级与样式限制……这些细节只有动手做一遍才会印象深刻。</p>
+</li>
+<li><p><strong>掌握了云开发完整流程</strong>：开通环境 → 建集合设权限 → 写云函数 → <code>npm install</code> 后”上传并部署：云端安装依赖”→ 小程序内调用，以及部署后代码变更需重新上传的坑（漏部署会导致”未知操作”）。</p>
+</li>
+<li><p><strong>UI 审美与真实产品对齐</strong>：参考 QQ空间的信息流布局（发说说入口、作者行、正文图、操作栏）让演示效果更贴近真实社交产品，也体会到”去掉多余的悬浮按钮、把入口放进信息流”这种设计取舍。</p>
+</li>
+</ol>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/" class="print-no-link">#微信小程序</a>
+      
+        <a href="/tags/%E5%AE%9E%E9%AA%8C%E6%8A%A5%E5%91%8A/" class="print-no-link">#实验报告</a>
+      
+        <a href="/tags/%E7%A7%BB%E5%8A%A8%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/" class="print-no-link">#移动软件开发</a>
+      
+        <a href="/tags/%E4%BA%91%E5%BC%80%E5%8F%91/" class="print-no-link">#云开发</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>实验6：微信小程序云开发——图片分享社区</div>
+      <div>http://example.com/2026/09/08/实验6-微信小程序云开发图片分享社区/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>Jie</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2026年9月8日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-cc-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2026/09/08/%E5%AE%9E%E9%AA%8C5-%E9%B8%BF%E8%92%99%E5%BC%80%E5%8F%91%E5%85%A5%E9%97%A8%E5%8F%8A%E8%AE%A1%E7%AE%97%E5%99%A8%E5%BC%80%E5%8F%91/" title="实验5：鸿蒙开发入门及计算器开发">
+                        <span class="hidden-mobile">实验5：鸿蒙开发入门及计算器开发</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> <div style="font-size: 0.85rem"> <span id="website-duration">载入网站运行时间...</span> <script src="/js/duration.js"></script> </div>     
+    </div>
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+
+
+
+  
+    
+      <script  src="/js/img-lazyload.js" ></script>
+    
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/5.0.0/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+  
+<script src="/star.js"></script>
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+<!-- hexo injector body_end start --><script src="/js/backgroundize.js"></script><!-- hexo injector body_end end --></body>
+</html>
