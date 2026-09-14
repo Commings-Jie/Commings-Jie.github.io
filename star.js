@@ -72,15 +72,15 @@ function snowCanvas() {
     /* 添加Dom结点 */
     var snowcanvas = document.createElement("canvas");
     snowcanvas.id = "snowfall";
-    snowcanvas.width = window.innerWidth;
+    snowcanvas.width = document.documentElement.clientWidth;
     snowcanvas.height = document.body.clientHeight;
-    snowcanvas.setAttribute("style", "position:absolute; top: 0; left: 0; z-index: 1; pointer-events: none;");
+    snowcanvas.setAttribute("style", "position:absolute; top: 0; left: 0; z-index: 1; pointer-events: none; max-width: 100%;");
     document.getElementsByTagName("body")[0].appendChild(snowcanvas);
     this.canvas = snowcanvas;
     this.ctx = snowcanvas.getContext("2d");
     /* 窗口大小改变的处理 */
     window.onresize = function() {
-        snowcanvas.width = window.innerWidth;
+        snowcanvas.width = document.documentElement.clientWidth;
         /* snowcanvas.height = window.innerHeight */
     }
 }
@@ -220,8 +220,10 @@ snow.start();
       'position: fixed',
       'top: 0',
       'left: 0',
-      'width: 100vw',
-      'height: 100vh',
+      'right: 0',
+      'bottom: 0',
+      'width: 100%',
+      'height: 100%',
       'object-fit: cover',
       'object-position: center center',
       'z-index: -1',
