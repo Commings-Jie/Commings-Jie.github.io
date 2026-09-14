@@ -195,184 +195,84 @@ snow.start();
     setInterval(update, 250);
   })();
 
-// ========== 首页视频背景 - 龙珠风景 ==========
+// ========== 方案二：全站一体化全景动态底景 ==========
 (function() {
-  var banner = document.querySelector('#banner');
-  if (!banner) return;
-
-  // 移除 banner 原有静态背景图
-  banner.style.backgroundImage = 'none';
-
-  // 设置 mask 为半透明，让视频透出
-  var mask = banner.querySelector('.mask');
-  if (mask) {
-    mask.style.backgroundColor = 'rgba(0, 0, 0, 0.15)';
-  }
-
-  // 创建视频元素
-  var video = document.createElement('video');
-  video.id = 'banner-video';
-  video.src = '/videos/dragonball.mp4?v=' + Date.now();
-  video.poster = '/videos/dragonball-poster.jpg?v=' + Date.now();
-  video.autoplay = true;
-  video.loop = true;
-  video.muted = true;
-  video.playsInline = true;
-  video.preload = 'auto';
-  video.setAttribute('playsinline', '');
-  video.setAttribute('webkit-playsinline', '');
-  video.setAttribute('autoplay', '');
-  video.setAttribute('loop', '');
-  video.setAttribute('muted', '');
-  
-  // 调试信息
-  video.addEventListener('error', function(e) {
-    console.error('Video error:', e);
-  });
-  video.addEventListener('canplay', function() {
-    console.log('Video can play');
-  });
-  video.addEventListener('playing', function() {
-    console.log('Video is playing');
-  });
-  
-  // 确保视频自动播放
-  var playPromise = video.play();
-  if (playPromise !== undefined) {
-    playPromise.then(function() {
-      console.log('Video autoplay success');
-    }).catch(function(e) {
-      console.log('Video autoplay failed:', e);
-      // 如果自动播放失败，尝试用户交互后播放
-      document.addEventListener('click', function() {
-        video.play();
-      }, { once: true });
-    });
-  }
-
-  // 视频样式：铺满 banner 区域，显示海岸线
-  video.style.cssText = [
-    'position: absolute',
-    'top: 0',
-    'left: 0',
-    'width: 100%',
-    'height: 100%',
-    'object-fit: cover',
-    'object-position: center center',
-    'z-index: 0',
-    'pointer-events: none',
-    'will-change: transform'
-  ].join(';');
-
-  // 插入到 banner 的最前面（在 mask 下方）
-  banner.insertBefore(video, banner.firstChild);
-
-  // 确保 banner 内部层级正确
-  banner.style.position = 'relative';
-  banner.style.overflow = 'hidden';
-
-  // 确保 full-bg-img 和 mask 在视频之上
-  var fullBg = banner.querySelector('.full-bg-img');
-  if (fullBg) {
-    fullBg.style.position = 'relative';
-    fullBg.style.zIndex = '1';
-  }
-
-  // 标题居中显示 - 在视口中心（50vh）
-  var bannerText = banner.querySelector('.banner-text');
-  if (bannerText) {
-    bannerText.style.cssText = [
+  // 创建或获取全局固定视频元素
+  var video = document.getElementById('banner-video');
+  if (!video) {
+    video = document.createElement('video');
+    video.id = 'banner-video';
+    video.src = '/videos/dragonball.mp4';
+    video.poster = '/videos/dragonball-poster.jpg';
+    video.autoplay = true;
+    video.loop = true;
+    video.muted = true;
+    video.playsInline = true;
+    video.preload = 'auto';
+    video.setAttribute('playsinline', '');
+    video.setAttribute('webkit-playsinline', '');
+    video.setAttribute('autoplay', '');
+    video.setAttribute('loop', '');
+    video.setAttribute('muted', '');
+    
+    // 全局底层定位
+    video.style.cssText = [
       'position: fixed',
-      'top: 50%',
-      'left: 50%',
-      'transform: translate(-50%, -50%)',
-      'z-index: 2',
-      'width: 100%',
+      'top: 0',
+      'left: 0',
+      'width: 100vw',
+      'height: 100vh',
+      'object-fit: cover',
+      'object-position: center center',
+      'z-index: -1',
       'pointer-events: none'
     ].join(';');
+
+    // 挂载到 body 最前方，作为全站唯一底景
+    document.body.insertBefore(video, document.body.firstChild);
     
-    // 滚动时标题淡出
-    window.addEventListener('scroll', function() {
-      var scrolled = window.pageYOffset;
-      var opacity = 1 - (scrolled / 300);
-      bannerText.style.opacity = Math.max(opacity, 0);
-    });
-  }
-
-  // 视差滚动效果
-  var ticking = false;
-  window.addEventListener('scroll', function() {
-    if (!ticking) {
-      window.requestAnimationFrame(function() {
-        var scrolled = window.pageYOffset;
-        var bannerHeight = banner.offsetHeight;
-        
-        // 视频视差 - 缓慢移动
-        if (scrolled < bannerHeight) {
-          video.style.transform = 'translateY(' + (scrolled * 0.3) + 'px)';
-        }
-        
-        // banner 淡出效果
-        var opacity = 1 - (scrolled / bannerHeight) * 0.5;
-        banner.style.opacity = Math.max(opacity, 0.5);
-        
-        ticking = false;
+    // 确保视频自动播放
+    var playPromise = video.play();
+    if (playPromise !== undefined) {
+      playPromise.catch(function() {
+        document.addEventListener('click', function() {
+          video.play();
+        }, { once: true });
       });
-      ticking = true;
     }
-  });
-
-  // 移动端优化：减少资源消耗
-  if (window.innerWidth < 768) {
-    video.style.objectPosition = 'center center';
   }
 
-  // 窗口大小变化时确保视频正确覆盖
-  window.addEventListener('resize', function() {
-    video.style.width = '100%';
-    video.style.height = '120%';
-  });
-})();
-
-// ========== 文章页面背景图处理 ==========
-(function() {
   var banner = document.querySelector('#banner');
-  if (!banner) return;
-  
-  // 检测是否是文章页面（有 post-meta 元素）
-  var isPost = document.querySelector('.post-meta') || window.location.pathname.match(/\/\d{4}\/\d{2}\/\d{2}\//);
-  if (!isPost) return;
-  
-  // 移除 CSS 背景图
-  banner.style.background = 'none';
-  
-  // 设置 banner 高度为 100vh，和首页一致
-  banner.parentElement.style.height = '100vh';
-  
-  // 创建 img 元素替代背景图，使用与首页视频相同的设置
-  var img = document.createElement('img');
-  img.src = '/img/beach-bg.png';
-  img.alt = 'banner';
-  img.style.cssText = [
-    'position: absolute',
-    'top: 0',
-    'left: 0',
-    'width: 100%',
-    'height: 100%',
-    'object-fit: cover',
-    'object-position: center center',
-    'z-index: 0',
-    'pointer-events: none'
-  ].join(';');
-  
-  banner.insertBefore(img, banner.firstChild);
-  banner.style.position = 'relative';
-  banner.style.overflow = 'hidden';
-  
-  var fullBg = banner.querySelector('.full-bg-img');
-  if (fullBg) {
-    fullBg.style.position = 'relative';
-    fullBg.style.zIndex = '1';
+  if (banner) {
+    // 移除原有静态背景图，设为透明
+    banner.style.backgroundImage = 'none';
+    banner.style.backgroundColor = 'transparent';
+
+    var mask = banner.querySelector('.mask');
+    if (mask) {
+      mask.style.backgroundColor = 'rgba(0, 0, 0, 0.2)';
+    }
+
+    // 标题居中显示并在视口中心（50vh）
+    var bannerText = banner.querySelector('.banner-text');
+    if (bannerText) {
+      bannerText.style.cssText = [
+        'position: fixed',
+        'top: 50%',
+        'left: 50%',
+        'transform: translate(-50%, -50%)',
+        'z-index: 2',
+        'width: 100%',
+        'pointer-events: none'
+      ].join(';');
+      
+      // 滚动时标题轻柔淡出
+      window.addEventListener('scroll', function() {
+        var scrolled = window.pageYOffset;
+        var opacity = 1 - (scrolled / 300);
+        bannerText.style.opacity = Math.max(opacity, 0);
+      });
+    }
   }
 })();
 
